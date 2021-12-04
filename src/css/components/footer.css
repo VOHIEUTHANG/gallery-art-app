@@ -58,6 +58,6 @@
 .foo_sub a {
   color: inherit;
 }
-.foo_sub a:hover {
+/* .foo_sub a:hover {
   color: var(--primary-color);
-}
+} */

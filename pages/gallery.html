@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Art</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="../src/css/globalStyle/base.css" />
+    <link rel="stylesheet" href="../src/css/components/footer.css" />
+    <link rel="stylesheet" href="../src/css/components/header.css" />
+    <link rel="stylesheet" href="../src/css/gallery.css" />
+    <!-- script -->
+    <script src="../src/script/jquery/jquery-3.6.0.slim.min.js"></script>
+    <script src="../src/script/components/header.js"></script>
+    <script src="../src/script/components/gototop.js"></script>
+    <script src="../src/script/gallery.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <header id="header" class="header">
+        <div class="hea_spacer"></div>
+        <div class="hea_logo-wrapper">
+          <a href="./index.html"
+            ><img src="../assets/images/1-home-logo.png" alt=""
+          /></a>
+        </div>
+        <nav class="hea_nav">
+          <ul class="hea_nav-list">
+            <li class="hea_nav-item">
+              <a href="../index.html" class="hea_nav-link"> home </a>
+            </li>
+            <li class="hea_nav-item">
+              <a href="./aboutUs.html" class="hea_nav-link"> about us </a>
+            </li>
+            <li class="hea_nav-item active">
+              <a href="./gallery.html" class="hea_nav-link"> gallery </a>
+            </li>
+            <li class="hea_nav-item">
+              <a href="./blog.html" class="hea_nav-link"> blog </a>
+            </li>
+            <li class="hea_nav-item">
+              <a href="./contacts.html" class="hea_nav-link"> contacts </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content-container">
+        <h1 style="display: block; margin: 120px 0; text-align: center">
+          Gallery
+        </h1>
+      </div>
+      <footer id="footer" class="footer">
+        <div class="foo_main-container">
+          <div class="container">
+            <div class="foo_main-img">
+              <img src="../assets/images/1-home-logo.png" alt="" />
+            </div>
+            <h3 class="foo_main-title">
+              … experience the amazing art on exhibit!
+            </h3>
+            <div class="foo_contact">
+              <div class="foo_contact-item phone">
+                <div class="icon-wrapper"><i class="fas fa-phone-alt"></i></div>
+                <span>123-456-7890</span>
+              </div>
+              <div class="foo_contact-item">
+                <div class="icon-wrapper">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>
+                  9401 N Meridian St, Indianapolis,
+                  <br />
+                  IN 46260, United States
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="foo_sub">
+          <div class="container">
+            <p class="foo_sub-title">
+              ExhibitA © 2020. All rights reserved. |&nbsp;&nbsp;
+              <a href="#">Privacy Policy</a>&nbsp;|&nbsp;&nbsp;<a href="#"
+                >Terms of Use</a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

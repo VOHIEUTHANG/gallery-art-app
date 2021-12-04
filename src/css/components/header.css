@@ -1,0 +1,62 @@
+.header {
+  background: var(--header-bg);
+}
+.hea_logo-wrapper {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hea_spacer {
+  height: 30px;
+}
+.hea_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hea_nav-list {
+  display: flex;
+}
+.hea_nav-item {
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s linear;
+  position: relative;
+}
+.hea_nav-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hea_nav-item.active > .hea_nav-link {
+  color: var(--primary-color);
+}
+.hea_nav-item:not(.active):hover::after {
+  width: 100%;
+}
+
+.hea_nav-item:hover > .hea_nav-link {
+  color: var(--primary-color);
+}
+.hea_nav-link {
+  display: block;
+  padding: 18px 30px;
+  transition: all 0.2s ease-in;
+  color: inherit;
+  white-space: nowrap;
+}
+.header .hea_nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--header-bg);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

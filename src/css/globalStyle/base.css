@@ -1,0 +1,84 @@
+/* =============== Reset css =============== */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+/* =============== GLobal class ===============*/
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.row {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.container-full {
+  max-width: 100vw;
+}
+.gototop {
+  transition: bottom 0.3s ease, background 0.1s linear, opacity 0.3s linear;
+}
+.gototop:hover {
+  background: rgb(13, 4, 49) !important;
+}
+.gototop.show {
+  opacity: 1 !important;
+  bottom: 30px !important;
+  visibility: visible !important;
+}
+
+/* =============== Variable ===============*/
+:root {
+  --primary-color: #ffe012;
+  --header-bg: rgb(247, 247, 247);
+  --footer-bg: rgb(247, 247, 247);
+  --header-height: 206px;
+}
+
+/* =============== Default styles ===============*/
+html {
+  font-size: 62.5%;
+  font-family: "Playfair Display", serif;
+}
+body {
+  min-height: 100vh;
+}
+#main {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #333;
+}

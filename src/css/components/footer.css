@@ -1,0 +1,63 @@
+.foo_main-container {
+  padding: 100px 0;
+  text-align: center;
+  background: var(--footer-bg);
+}
+.foo_main-img > img {
+  margin: 0 auto;
+}
+.foo_main-title {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  font-weight: 400;
+  letter-spacing: 0px;
+  white-space: nowrap;
+}
+.foo_contact {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-evenly;
+}
+.foo_contact-item {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px 20px 15px;
+}
+.foo_contact-item > div {
+  margin-right: 20px;
+}
+.foo_contact-item > .icon-wrapper > i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.foo_contact-item.phone {
+  padding-left: 30px;
+}
+.foo_contact-item.phone > span {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.foo_contact-item:not(.phone) > span {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.foo_contact-item > span {
+  white-space: nowrap;
+}
+.foo_sub {
+  background: #222832;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+}
+.foo_sub a {
+  color: inherit;
+}
+.foo_sub a:hover {
+  color: var(--primary-color);
+}

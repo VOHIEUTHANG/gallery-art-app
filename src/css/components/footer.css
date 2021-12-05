@@ -1,7 +1,7 @@
 .foo_main-container {
   padding: 100px 0;
   text-align: center;
-  background: var(--footer-bg);
+  background: var(--primary-bg);
 }
 .foo_main-img > img {
   margin: 0 auto;

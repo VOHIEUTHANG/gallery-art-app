@@ -63,9 +63,14 @@ ul {
 /* =============== Variable ===============*/
 :root {
   --primary-color: #ffe012;
-  --header-bg: rgb(247, 247, 247);
-  --footer-bg: rgb(247, 247, 247);
+  --primary-bg: rgb(247, 247, 247);
   --header-height: 206px;
+  --dark-1: #222832;
+  /* palette colors */
+  --pl-color-1: #f8f8f8;
+  --pl-color-2: #f1d6ab;
+  --pl-color-3: #e3b04b;
+  --pl-color-4: #2b2b28;
 }
 
 /* =============== Default styles ===============*/

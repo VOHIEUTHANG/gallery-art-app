@@ -1,8 +1,9 @@
+/* ============== SECTION 1 ============== */
+
 .introduce-section {
   background-image: url("../../assets/images/Home-section1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: center; */
   padding-bottom: 110px;
   padding-top: var(--header-height);
 }
@@ -13,7 +14,6 @@
   padding: 110px 15px 70px 15px;
   background-image: url(../../assets/images/Home-decorate.png);
   background-repeat: no-repeat;
-  /* background-size: cover; */
   background-position: left top;
 }
 .intro_greeting {
@@ -52,8 +52,8 @@
   background-color: transparent;
 }
 
-.event-section {
-}
+/* ============== SECTION 2 ============== */
+
 .event-container {
   max-width: 1500px;
   margin: 0 auto;
@@ -133,8 +133,6 @@
   padding: 50px 0;
   margin-top: 30px;
 }
-.es-left {
-}
 .es-col {
   flex: 0 0 50%;
   display: flex;
@@ -155,8 +153,6 @@
   line-height: 1.5;
   letter-spacing: 1px;
 }
-.es-right {
-}
 .event-img {
   flex: 0 0 50%;
   padding: 0 15px;
@@ -166,7 +162,68 @@
   height: 100%;
   object-fit: cover;
 }
-.es-left.es-col {
+
+/* ============== SECTION 3 ============== */
+
+.artists-section {
+  background: var(--primary-bg);
+  padding: 110px;
 }
-.es-right.es-col {
+
+.artists-title {
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+.artists-list {
+  display: flex;
+}
+.artists-item {
+  flex: 0 0 25%;
+  padding: 0 20px;
+}
+.artists-item > img {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.artists-item > img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.artists-name {
+  display: block;
+  font-weight: 700;
+  color: var(--dark-1);
+  font-size: 2.4rem;
+  text-align: center;
+  margin-top: 15px;
+  transition: all 0.2s linear;
+}
+.artists-name:hover {
+  color: var(--pl-color-3);
+}
+.artists-type {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+/* ============== SECTION 4 ============== */
+.exhibitions-section {
+}
+
+.exhibitions-container {
+  background-image: url("../../assets/images/Home-section4-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.exhibitions-gallery {
+  min-height: 1080px;
 }

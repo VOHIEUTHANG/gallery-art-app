@@ -1,18 +1,17 @@
 .introduce-section {
-  background-image: url("../../assets/images/2-home-background.jpg");
+  background-image: url("../../assets/images/Home-section1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   /* background-position: center; */
   padding-bottom: 110px;
   padding-top: var(--header-height);
 }
-
 .intro_spacer {
   padding-top: 150px;
 }
 .intro_main {
   padding: 110px 15px 70px 15px;
-  background-image: url(../../assets/images/3-home-decorate.png);
+  background-image: url(../../assets/images/Home-decorate.png);
   background-repeat: no-repeat;
   /* background-size: cover; */
   background-position: left top;

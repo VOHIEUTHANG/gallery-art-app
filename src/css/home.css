@@ -225,11 +225,70 @@
   margin-bottom: 70px;
 }
 .exhibitions-container {
-  background-image: url("../../assets/images/Home-section4-bg.jpg");
+  height: 1080px;
+  background-image: url("../../assets/images/Home-section4-4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  position: relative;
 }
 .exhibitions-gallery {
-  min-height: 1080px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  position: relative;
+  transition: all 0.4s linear;
+  transition: all 0.2s linear;
+  opacity: 0.5;
+}
+.exhibitions-gallery:hover {
+  opacity: 1;
+}
+.exhibitions-gallery::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 130%;
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.gallery-item {
+  position: relative;
+  width: calc(100% / 7);
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  flex-grow: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  z-index: 1;
+  opacity: 0.6;
+  filter: brightness(50%);
+}
+.gallery-item:hover {
+  z-index: 2;
+  opacity: 1;
+  filter: brightness(90%);
+  transform: translateY(-10px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.gallery-item.active {
+  opacity: 1;
+  transform: scale(1.1) translateY(-20px);
+  filter: brightness(120%);
+  z-index: 10;
+  box-shadow: 0 20px 40px 10px black;
+  border-radius: 5px;
+}
+.gallery-item > img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }

@@ -216,8 +216,14 @@
 }
 /* ============== SECTION 4 ============== */
 .exhibitions-section {
+  padding: 110px 0;
 }
-
+.exhibitions-title {
+  text-align: center;
+  font-size: 4.8rem;
+  color: var(--dark-1);
+  margin-bottom: 70px;
+}
 .exhibitions-container {
   background-image: url("../../assets/images/Home-section4-bg.jpg");
   background-repeat: no-repeat;

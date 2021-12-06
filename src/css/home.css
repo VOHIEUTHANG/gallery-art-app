@@ -234,12 +234,14 @@ h2.main-title {
 }
 .exhibitions-container {
   height: 1080px;
+  background: black;
   background-image: url("../../assets/images/Home-section4-7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
   overflow: hidden;
+  animation: fade 1s linear;
 }
 .exhibitions-gallery-container {
   position: absolute;
@@ -287,6 +289,14 @@ h2.main-title {
   opacity: 0.6;
   filter: brightness(50%);
 }
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .gallery-item:hover {
   z-index: 2;
   opacity: 1;
@@ -329,6 +339,11 @@ h2.main-title {
   font-size: 2rem;
   color: white;
 }
+.gallery-ct.disable {
+  cursor: default !important;
+  opacity: 0.3 !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
 .gallery-ct-prev {
   left: 0;
 }
@@ -339,8 +354,78 @@ h2.main-title {
   background: rgba(255, 255, 255, 0.4);
   box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 40px 10px;
 }
-
+/* ============== SECTION 5 ============== */
 .visit-section {
   padding: 110px 0;
   background: var(--primary-bg);
+}
+.visit-container {
+  display: flex;
+}
+.visit-item {
+  flex: 0 0 calc(100% / 3);
+  margin: 0 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.visit-img {
+  overflow: hidden;
+  position: relative;
+}
+.visit-img:hover {
+  cursor: pointer;
+}
+.visit-img:hover > img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+.visit-img > img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+.visti-des {
+  text-align: center;
+  background: var(--primary-color);
+  padding: 20px 0;
+}
+.visit-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  margin-bottom: 8px;
+}
+.visit-heading:hover {
+  color: white;
+}
+.visit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.visit-overlay > img {
+  max-width: 60%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+.visit-overlay > .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  font-size: 4rem;
+  height: 50px;
+  color: #ccc;
+  transition: all 0.2s linear;
+}
+.visit-overlay > .close:hover {
+  color: rgb(195, 72, 72);
 }

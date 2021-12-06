@@ -234,18 +234,24 @@ h2.main-title {
 }
 .exhibitions-container {
   height: 1080px;
-  background-image: url("../../assets/images/Home-section4-4.jpg");
+  background-image: url("../../assets/images/Home-section4-7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
+  overflow: hidden;
+}
+.exhibitions-gallery-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.exhibitions-gallery-container:hover > .gallery-ct {
+  visibility: visible;
+  opacity: 0.7;
 }
 .exhibitions-gallery {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   position: relative;
   transition: all 0.4s linear;
@@ -255,10 +261,11 @@ h2.main-title {
 .exhibitions-gallery:hover {
   opacity: 1;
 }
+
 .exhibitions-gallery::after {
   position: absolute;
   content: "";
-  width: 100%;
+  width: 400%;
   height: 130%;
   display: block;
   background: rgba(0, 0, 0, 0.3);
@@ -299,6 +306,38 @@ h2.main-title {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.gallery-ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4%;
+  height: 130%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  cursor: pointer;
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.gallery-ct > i {
+  font-size: 2rem;
+  color: white;
+}
+.gallery-ct-prev {
+  left: 0;
+}
+.gallery-ct-next {
+  right: 0;
+}
+.gallery-ct:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 40px 10px;
 }
 
 .visit-section {

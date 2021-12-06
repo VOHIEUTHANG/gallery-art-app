@@ -52,11 +52,11 @@ $(function () {
     $('.visit-img').click(function () {
         $(this).children('.visit-overlay').css('visibility', 'visible');
     })
+    $('.visit-overlay > img').click(function (e) {
+        e.stopPropagation();
+    })
     $('.visit-overlay').click(function (e) {
         e.stopPropagation();
         $(this).css('visibility', 'hidden');
-        $(this).children('img').click(function (e) {
-            e.stopPropagation();
-        })
     })
 })

@@ -448,3 +448,49 @@ h2.main-title {
   box-shadow: 0px -100px 0 var(--pl-color-3) inset;
   text-shadow: 0 0 20px white 0 0 50px white;
 }
+/* =============== SECTION 6 ================= */
+.artBlog-section {
+  background: var(--primary-bg);
+  padding: 110px 0;
+}
+
+.main-title {
+}
+.artBlog-list {
+  display: flex;
+}
+.artBlog-item {
+  flex: 1;
+  margin: 0 15px;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.artBlog-item:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.artBlog-img {
+  overflow: hidden;
+}
+.artBlog-img > img {
+  transition: all 0.2s linear;
+}
+.artBlog-img:hover > img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+.artBlog-name {
+  font-size: 2.8rem;
+  margin: 20px 0;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.artBlog-name:hover {
+  color: var(--primary-color);
+}
+.artBlog-des {
+  /* font-size: 1.8rem; */
+  margin-bottom: 20px;
+}

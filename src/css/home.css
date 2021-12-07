@@ -278,7 +278,7 @@ h2.main-title {
 }
 .gallery-item {
   position: relative;
-  width: calc(100% / 7);
+  width: calc(100% / 5);
   flex-wrap: nowrap;
   flex-shrink: 0;
   flex-grow: 0;
@@ -357,17 +357,17 @@ h2.main-title {
 /* ============== SECTION 5 ============== */
 .visit-section {
   padding: 110px 0;
-  background: var(--primary-bg);
 }
 .visit-container {
   display: flex;
 }
 .visit-item {
-  flex: 0 0 calc(100% / 3);
+  flex-wrap: wrap;
+  flex: 0 0 unset;
   margin: 0 15px;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .visit-img {
   overflow: hidden;
@@ -428,4 +428,23 @@ h2.main-title {
 }
 .visit-overlay > .close:hover {
   color: rgb(195, 72, 72);
+}
+.visit-btn {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 70px;
+  cursor: pointer;
+  padding: 15px 40px;
+  background: #ccc;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  box-shadow: 0px -0px 0 var(--primary-color) inset;
+}
+.visit-btn:hover {
+  color: white;
+  box-shadow: 0px -100px 0 var(--pl-color-3) inset;
+  text-shadow: 0 0 20px white 0 0 50px white;
 }

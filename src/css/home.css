@@ -31,6 +31,7 @@ h2.main-title {
   font-weight: 700;
   font-size: 3.6rem;
   line-height: 2;
+  animation: slidTtB 1s ease-in;
 }
 
 .intro_main-title {
@@ -38,13 +39,37 @@ h2.main-title {
   font-size: 9rem;
   line-height: 1.1;
   letter-spacing: 4px;
+  animation: slideLtR 1s ease-in-out;
 }
-
+@keyframes slideLtR {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+@keyframes slideBtT {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+}
+@keyframes slidTtB {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
 .intro_sub-title {
   font-weight: 400;
   font-size: 9rem;
   line-height: 1.1;
   margin-left: 80px;
+  animation: fadeIn 1s linear;
 }
 
 .intro_description {
@@ -54,6 +79,7 @@ h2.main-title {
   letter-spacing: 0;
   margin-left: 60px;
   margin-top: 20px;
+  animation: slideBtT 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .header.header--home {
   position: absolute;

@@ -105,24 +105,13 @@ h2.main-title {
   cursor: pointer;
   background: #ebebeb;
   font-weight: 600;
-  transition: all 0.2s linear;
   border-radius: 2px;
-}
-.ed-button::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 3px;
-  top: 100%;
-  left: 0;
-  background: var(--pl-color-4);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s linear;
+  box-shadow: 0 0 var(--primary-color) inset;
 }
 .ed-button:hover {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background: var(--pl-color-3);
-  color: var(--pl-color-1);
+  box-shadow: 300px 0 var(--primary-color) inset;
+  color: white;
 }
 .ed-button:hover::after {
   width: 100%;
@@ -439,14 +428,15 @@ h2.main-title {
   font-size: 2rem;
   font-weight: bold;
   border-radius: 2px;
-  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   overflow: hidden;
   box-shadow: 0px -0px 0 var(--primary-color) inset;
 }
 .visit-btn:hover {
   color: white;
-  box-shadow: 0px -100px 0 var(--pl-color-3) inset;
+  box-shadow: 0px -100px 0 var(--primary-color) inset;
   text-shadow: 0 0 20px white 0 0 50px white;
+  transform: scale(1.1);
 }
 /* =============== SECTION 6 ================= */
 .artBlog-section {
@@ -462,7 +452,7 @@ h2.main-title {
 .artBlog-item {
   flex: 1;
   margin: 0 15px;
-  padding: 15px;
+  padding: 25px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s linear;
@@ -473,8 +463,10 @@ h2.main-title {
 }
 .artBlog-img {
   overflow: hidden;
+  height: 50%;
 }
 .artBlog-img > img {
+  height: 100%;
   transition: all 0.2s linear;
 }
 .artBlog-img:hover > img {
@@ -482,15 +474,142 @@ h2.main-title {
   filter: brightness(80%);
 }
 .artBlog-name {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   margin: 20px 0;
   transition: all 0.2s linear;
   cursor: pointer;
 }
-.artBlog-name:hover {
-  color: var(--primary-color);
-}
 .artBlog-des {
   /* font-size: 1.8rem; */
   margin-bottom: 20px;
+}
+/* =================== SECTION 7 =================== */
+.contact-section {
+  padding: 110px;
+  background-image: url("../../assets/images/Home-section7.jpg");
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+}
+.container {
+}
+.contact-container {
+  overflow: hidden;
+  color: white;
+}
+.contact-heading {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact-sub-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 60px;
+}
+.contact-wrapper {
+  display: flex;
+}
+.contact-form {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  color: #333;
+  padding: 40px;
+}
+.contact-form > h3 {
+  margin-bottom: 20px;
+}
+.contact-form > .name,
+.contact-form > .email {
+  border-bottom: 3px solid var(--primary-color);
+  font-size: 18px;
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.contact-form > .message {
+  margin-top: 20px;
+  border: 1px solid rgb(221, 217, 217);
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  border-radius: 4px;
+}
+.contact-form > .button {
+  width: fit-content;
+  padding: 14px 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  background: rgb(243, 236, 236);
+  transition: all 0.4s ease-out;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+}
+.contact-form > .button:hover {
+  border-bottom: 3px solid var(--primary-color);
+  background: var(--pl-color-4);
+  color: white;
+}
+.flex-item {
+  flex: 0 0 50%;
+}
+.flex-item.flex-item-form {
+  flex: 0 0 60%;
+}
+.flex-item.flex-item-social {
+  flex: 0 0 40%;
+}
+.flex-item:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-media-wrapper {
+  margin: 0 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-title {
+  text-align: center;
+}
+.contact-social-list {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.contact-media-item {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  box-shadow: 0 0 0 var(--primary-color) inset;
+  overflow: hidden;
+}
+.contact-media-item:hover {
+  box-shadow: 0 -100px 0 var(--primary-color) inset;
+  transform: scale(1.1);
+}
+.contact-media-item:hover > i {
+  color: white !important;
+}
+.contact-media-item > i {
+  color: #333;
+  font-size: 23px;
 }

@@ -17,6 +17,7 @@ textarea,
 select,
 button {
   outline: none;
+  border: none;
 }
 input {
   line-height: normal;

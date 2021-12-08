@@ -1,5 +1,6 @@
 .header {
   background: var(--primary-bg);
+  background: #222;
 }
 .hea_logo-wrapper {
   padding: 20px 0;

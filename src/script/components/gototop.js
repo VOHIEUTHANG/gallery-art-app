@@ -12,6 +12,7 @@ $(() => {
         justifyContent: 'center',
         alignItems: 'center',
         opacity: '0',
+        zIndex: '999'
     })
     container.classList.add('gototop')
     container.innerHTML = `

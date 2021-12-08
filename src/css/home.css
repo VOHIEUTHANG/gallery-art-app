@@ -9,20 +9,23 @@ h2.main-title {
 /* ============== SECTION 1 ============== */
 
 .introduce-section {
-  background-image: url("../../assets/images/Home-section1.jpg");
+  background-image: url("../../assets/images/Home-section1-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 110px;
   padding-top: var(--header-height);
+  box-shadow: 0 -200vh rgba(0, 0, 0, 0.7) inset;
 }
 .intro_spacer {
-  padding-top: 150px;
+  padding-top: 80px;
 }
 .intro_main {
-  padding: 110px 15px 70px 15px;
+  padding: 60px 15px 60px 15px;
   background-image: url(../../assets/images/Home-decorate.png);
+
   background-repeat: no-repeat;
   background-position: left top;
+  color: white;
 }
 .intro_greeting {
   margin-left: 80px;
@@ -35,6 +38,7 @@ h2.main-title {
   font-weight: 700;
   font-size: 9rem;
   line-height: 1.1;
+  letter-spacing: 4px;
 }
 
 .intro_sub-title {
@@ -234,8 +238,9 @@ h2.main-title {
 }
 .exhibitions-gallery-container {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  /* top: 50%;
+  transform: translateY(-50%); */
+  bottom: 0;
   left: 0;
 }
 .exhibitions-gallery-container:hover > .gallery-ct {
@@ -252,22 +257,9 @@ h2.main-title {
 .exhibitions-gallery:hover {
   opacity: 1;
 }
-
-.exhibitions-gallery::after {
-  position: absolute;
-  content: "";
-  width: 400%;
-  height: 130%;
-  display: block;
-  background: rgba(0, 0, 0, 0.3);
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-}
 .gallery-item {
   position: relative;
-  width: calc(100% / 5);
+  width: calc(100% / 7);
   flex-wrap: nowrap;
   flex-shrink: 0;
   flex-grow: 0;
@@ -277,6 +269,7 @@ h2.main-title {
   z-index: 1;
   opacity: 0.6;
   filter: brightness(50%);
+  border-radius: 4px;
 }
 @keyframes fade {
   from {
@@ -312,7 +305,7 @@ h2.main-title {
   top: 50%;
   transform: translateY(-50%);
   width: 4%;
-  height: 130%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -456,6 +449,7 @@ h2.main-title {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s linear;
+  background: white;
 }
 .artBlog-item:hover {
   transform: translateY(-10px);

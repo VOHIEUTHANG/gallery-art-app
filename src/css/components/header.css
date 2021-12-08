@@ -28,7 +28,7 @@
   display: block;
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 4px;
   bottom: -2px;
   left: 50%;
   background-color: var(--primary-color);
@@ -46,18 +46,26 @@
   color: var(--primary-color);
 }
 .hea_nav-link {
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
   display: block;
   padding: 18px 30px;
   transition: all 0.2s ease-in;
-  color: inherit;
+  font-size: 1.8rem;
   white-space: nowrap;
+  min-width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header .hea_nav.fixed {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--primary-bg);
+  background-color: var(--pl-color-4);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   z-index: 100;
 }

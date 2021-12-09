@@ -54,6 +54,6 @@ $(document).ready(function () {
         }
         slides[slideIndex - 1].style.display = "flex";
         dots[slideIndex - 1].className += " our-mems_dotted";
-        setTimeout(showSlides, 2000);
+        setTimeout(showSlides, 5000);
     }
 })

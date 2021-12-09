@@ -8,7 +8,7 @@ h2.main-title {
 }
 /* ============== SECTION 1 ============== */
 .introduce-section {
-  background-image: url("../../assets/images/Home-section1-bg.jpg");
+  background-image: url("../../assets/images/HomePageIMG/Home-section1-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 110px;
@@ -20,7 +20,7 @@ h2.main-title {
 }
 .intro_main {
   padding: 60px 15px 60px 15px;
-  background-image: url(../../assets/images/Home-decorate.png);
+  background-image: url(../../assets/images/HomePageIMG/Home-decorate.png);
 
   background-repeat: no-repeat;
   background-position: left top;
@@ -253,7 +253,7 @@ h2.main-title {
 .exhibitions-container {
   height: 1080px;
   background: black;
-  background-image: url("../../assets/images/Home-section4-7.jpg");
+  background-image: url("../../assets/images/HomePageIMG/Home-section4-7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -505,7 +505,7 @@ h2.main-title {
 /* =================== SECTION 7 =================== */
 .contact-section {
   padding: 110px;
-  background-image: url("../../assets/images/Home-section7.jpg");
+  background-image: url("../../assets/images/HomePageIMG/Home-section7.jpg");
   background-size: cover;
   background-position: center center;
   box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;

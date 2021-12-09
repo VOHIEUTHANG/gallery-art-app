@@ -1,3 +1,62 @@
+// SECTION 1 - START ========================
+$(function () {
+    const backgroundsSRC = [
+        '../../assets/images/HomePageIMG/Home-section1-bg1.jpg',
+        '../../assets/images/HomePageIMG/Home-section1-bg2.jpg',
+        '../../assets/images/HomePageIMG/Home-section1-bg3.jpg'
+    ];
+    let index = 0;
+    const dots = $('.intro-dot');
+    let intervalID;
+    const autoSlideDuration = 5000;
+    const slidehandler = () => {
+        $('.introduce-section').css({
+            'background-image': `url(${backgroundsSRC[index]})`,
+            opacity: 1
+        })
+    };
+    dots.click(function () {
+        $('.introduce-section').css({
+            'opacity': 0
+        })
+        dots.removeClass('active');
+        $(this).addClass('active');
+        clearInterval(intervalID);
+        switch (this) {
+            case dots[0]:
+                if (index !== 0) {
+                    index = 0;
+                    slidehandler();
+                }
+                break;
+            case dots[1]:
+                if (index !== 1) {
+                    index = 1;
+                    slidehandler();
+                }
+                break;
+            case dots[2]:
+                if (index !== 2) {
+                    index = 2;
+                    slidehandler();
+                }
+                break;
+            default:
+                throw Error('Invalid Background Handle Section!')
+        }
+        autoSlide();
+    })
+    function autoSlide() {
+        intervalID = setInterval(() => {
+            index < 2 ? index++ : index = 0;
+            slidehandler();
+            $('.intro-dot.active') && $('.intro-dot.active').removeClass('active');
+            $(dots[index]).addClass('active');
+        }, autoSlideDuration)
+    }
+    autoSlide();
+
+})
 // SECTION 4 - START ========================
 $(function () {
     const galleryItem = $(".gallery-item");

@@ -1,9 +1,11 @@
 // SECTION 1 - START ========================
 $(function () {
+    let path = $('.introduce-section').css('background-image')
+    path = path.slice(5, path.length - 2);
     const backgroundsSRC = [
-        './../../assets/images/HomePageIMG/Home-section1-bg1.jpg',
-        './../../assets/images/HomePageIMG/Home-section1-bg2.jpg',
-        './../../assets/images/HomePageIMG/Home-section1-bg3.jpg'
+        path,
+        path.replace('bg1', 'bg2'),
+        path.replace('bg1', 'bg3')
     ];
     let index = 0;
     const dots = $('.intro-dot');

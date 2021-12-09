@@ -1,9 +1,9 @@
 // SECTION 1 - START ========================
 $(function () {
     const backgroundsSRC = [
-        '../../assets/images/HomePageIMG/Home-section1-bg1.jpg',
-        '../../assets/images/HomePageIMG/Home-section1-bg2.jpg',
-        '../../assets/images/HomePageIMG/Home-section1-bg3.jpg'
+        './../../assets/images/HomePageIMG/Home-section1-bg1.jpg',
+        './../../assets/images/HomePageIMG/Home-section1-bg2.jpg',
+        './../../assets/images/HomePageIMG/Home-section1-bg3.jpg'
     ];
     let index = 0;
     const dots = $('.intro-dot');

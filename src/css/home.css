@@ -8,12 +8,17 @@ h2.main-title {
 }
 /* ============== SECTION 1 ============== */
 .introduce-section {
-  background-image: url("../../assets/images/HomePageIMG/Home-section1-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
   padding-bottom: 110px;
+  background-color: black;
+  background-image: url("../../assets/images/HomePageIMG/Home-section1-bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   padding-top: var(--header-height);
   box-shadow: 0 -200vh rgba(0, 0, 0, 0.7) inset;
+  height: 100vh;
+  transition: all 0.4s ease-in;
 }
 .intro_spacer {
   padding-top: 80px;
@@ -87,8 +92,36 @@ h2.main-title {
   left: 0;
   right: 0;
   background-color: transparent;
+  z-index: 100;
 }
 
+.intro_dots {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255);
+  opacity: 0.5;
+  margin: 0 14px;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.2s linear;
+}
+.intro-dot.active {
+  background: var(--primary-color);
+  opacity: 1;
+}
+.intro-dot:hover {
+  opacity: 1;
+}
 /* ============== SECTION 2 ============== */
 
 .event-container {

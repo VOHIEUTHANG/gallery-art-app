@@ -17,6 +17,9 @@
   cursor: pointer;
   transition: all 0.2s linear;
 }
+.home:visited {
+  color: var(--pl-color-4);
+}
 .home:hover {
   color: var(--pl-color-3);
 }
@@ -102,19 +105,19 @@
   cursor: pointer;
   transition: all 0.1s linear;
 }
+.change-p2:visited {
+  color: var(--pl-color-4);
+}
 .change-p2:hover {
   color: var(--pl-color-3);
 }
-
 .next-page:hover {
   color: var(--pl-color-3);
 }
 .last-page:hover {
   color: var(--pl-color-3);
 }
-a:active {
+.change-page:active {
   color: var(--pl-color-3);
 }
-a:visited {
-  color: var(--pl-color-4);
-}
+

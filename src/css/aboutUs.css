@@ -10,17 +10,14 @@ body {
   font-weight: 500;
 }
 
+/* ===== thumb ===== */
 .thumb {
   background-color: var(--pl-color-1);
   padding: 30px 100px;
 }
 
-.spaces {
-  padding: 20px auto;
-}
-
 .thumb_title > h1 {
-  font-size: 55px;
+  font-size: 60px;
   text-align: center;
   padding-top: 30px;
 }
@@ -50,6 +47,7 @@ body {
   line-height: 1.5;
 }
 
+/* ===== reason ===== */
 .why_bg-dark {
   background-color: var(--pl-color-4);
   color: var(--pl-color-1);
@@ -101,6 +99,7 @@ body {
   font-size: 26px;
 }
 
+/* ===== Members ===== */
 .our-mems {
   margin: 10px auto;
 }
@@ -108,7 +107,7 @@ body {
 .our-mems > h2 {
   padding: 20px 0;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
 }
 
@@ -165,6 +164,7 @@ body {
 }
 
 .mems_intro {
+  font-size: 14px;
   text-align: center;
   opacity: 0;
 	visibility: hidden;
@@ -209,6 +209,7 @@ body {
   color: var(--pl-color-3);
 }
 
+/* ===== Mems trans ===== */
 .our-mems_trans {
   text-align: center;
 }
@@ -227,6 +228,7 @@ body {
   background-color: var(--pl-color-4);
 }
 
+/* ===== Sign-up ===== */
 .sign-up {
   margin-top: 30px;
   padding-top: 30px;
@@ -241,14 +243,14 @@ body {
 .sign-up > h2 {
   padding-top: 20px;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
 }
 
 .sign-up > p {
   padding: 10px 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -274,6 +276,7 @@ input {
   margin-top: 10px;
   border: none;
   border-bottom: var(--pl-color-1) solid 1px;
+  color: var(--pl-color-1);
 }
 
 .sign_btn-submit {

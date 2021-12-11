@@ -111,7 +111,6 @@ $(function () {
     // })
     $(window).on('load', () => {
         const item = $('.visit-item');
-        const artBlogItem = $(".artBlog-item");
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -122,9 +121,6 @@ $(function () {
         [...item].forEach(item => {
             observer.observe(item)
         });
-        [...artBlogItem].forEach(item => {
-            observer.observe(item)
-        })
     })
 })
 // SECTION 5 -  START  ========================

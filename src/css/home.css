@@ -407,8 +407,7 @@ h2.main-title {
 .visit-item {
   flex-wrap: wrap;
   margin: 0 15px;
-  padding: 18px;
-  border-radius: 4px;
+  padding-bottom: 20px;
   overflow: hidden;
   transition: all 0.2s linear;
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -446,6 +445,7 @@ h2.main-title {
 .visit-img > img {
   width: 100%;
   object-fit: cover;
+
   transition: all 0.2s linear;
 }
 .visti-des {

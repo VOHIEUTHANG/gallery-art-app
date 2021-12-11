@@ -134,13 +134,13 @@ body {
 
 .our-mems_single-card {
   margin: 30px;
-	width: 320px;
-	height: 400px;
-	background-color: var(--pl-color-4);
-	border-radius: 15px;
-	padding: 40px 20px;
-	color: var(--pl-color-1);
-	position: relative;
+  width: 320px;
+  height: 400px;
+  background-color: var(--pl-color-4);
+  border-radius: 15px;
+  padding: 40px 20px;
+  color: var(--pl-color-1);
+  position: relative;
 }
 
 .mem_thumb {
@@ -167,15 +167,15 @@ body {
 .mems_intro {
   text-align: center;
   opacity: 0;
-	visibility: hidden;
-	transition: 0.5s;
+  visibility: hidden;
+  transition: 0.5s;
 }
 
 .our-mems_single-card:hover .mems_intro {
   margin-top: -40px;
   transition-delay: 0.2s;
-	opacity: 1;
-	visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .single-card_img > img {
@@ -196,17 +196,26 @@ body {
   text-align: center;
 }
 
+.mems_contact {
+  display: flex;
+  height: 70px;
+  margin-bottom: 6px;
+}
 .mems_contact > a {
-  text-decoration: none;
+  flex: 1;
   color: var(--pl-color-1);
-  margin: 20px 22px;
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 26px;
+  font-size: 24px;
+  transition: all 0.2s linear;
 }
 
 .mems_contact > a:hover {
   color: var(--pl-color-3);
+  transform: scale(1.1);
 }
 
 .our-mems_trans {

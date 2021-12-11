@@ -112,6 +112,7 @@ $(function () {
 $(function () {
     $('.visit-img').click(function () {
         $(this).children('.visit-overlay').css('visibility', 'visible');
+        $(this).find('.visit-overlay > img').css('transform', 'scale(1)')
     })
     $('.visit-overlay > img').click(function (e) {
         e.stopPropagation();
@@ -119,5 +120,6 @@ $(function () {
     $('.visit-overlay').click(function (e) {
         e.stopPropagation();
         $(this).css('visibility', 'hidden');
+        $(this).children('img').css('transform', 'scale(0)');
     })
 })

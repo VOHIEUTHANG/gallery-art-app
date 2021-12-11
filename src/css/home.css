@@ -161,7 +161,8 @@ h2.main-title {
 .ed-button {
   position: relative;
   display: inline-block;
-  padding: 15px 40px;
+  padding: 24px 40px;
+  text-transform: uppercase;
   margin-top: 40px;
   margin-left: 20px;
   cursor: pointer;
@@ -170,6 +171,7 @@ h2.main-title {
   border-radius: 2px;
   transition: all 0.3s linear;
   box-shadow: 0 0 var(--primary-color) inset;
+  text-transform: uppercase;
 }
 .ed-button:hover {
   box-shadow: 300px 0 var(--primary-color) inset;
@@ -403,11 +405,28 @@ h2.main-title {
 }
 .visit-item {
   flex-wrap: wrap;
-  flex: 0 0 unset;
   margin: 0 15px;
-  border-radius: 3px;
+  padding: 18px;
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.2s linear;
+  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.visit-hover-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.visit-hover-layer > i {
+  color: white;
+  font-size: 5rem;
 }
 .visit-img {
   overflow: hidden;
@@ -415,6 +434,9 @@ h2.main-title {
 }
 .visit-img:hover {
   cursor: pointer;
+}
+.visit-img:hover > .visit-hover-layer {
+  left: 0;
 }
 .visit-img:hover > img {
   transform: scale(1.1);
@@ -427,7 +449,6 @@ h2.main-title {
 }
 .visti-des {
   text-align: center;
-  background: var(--primary-color);
   padding: 20px 0;
 }
 .visit-heading {
@@ -438,7 +459,7 @@ h2.main-title {
   margin-bottom: 8px;
 }
 .visit-heading:hover {
-  color: white;
+  color: var(--primary-color);
 }
 .visit-overlay {
   position: fixed;
@@ -454,6 +475,8 @@ h2.main-title {
   max-width: 60%;
   height: 80%;
   object-fit: cover;
+  transition: 0.2s ease-out;
+  transform: scale(0);
 }
 
 .visit-overlay > .close {
@@ -474,14 +497,16 @@ h2.main-title {
   margin: 0 auto;
   margin-top: 70px;
   cursor: pointer;
-  padding: 15px 40px;
-  background: #ccc;
+  padding: 20px 40px;
+  background: rgb(237, 238, 230);
   font-size: 2rem;
-  font-weight: bold;
-  border-radius: 2px;
+  font-weight: 600;
+  border-radius: 4px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   overflow: hidden;
   box-shadow: 0px -0px 0 var(--primary-color) inset;
+  text-transform: uppercase;
+  font-family: inherit;
 }
 .visit-btn:hover {
   color: white;

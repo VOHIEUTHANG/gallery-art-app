@@ -110,10 +110,11 @@ $(function () {
     //     console.log("right", right);
     // })
     $(window).on('load', () => {
-        const item = $('.visit-item');
+        const item = $('.artBlog-item');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
+                    console.log(entry.target);
                     !entry.target.classList.contains('show') && entry.target.classList.add('show')
                 }
             })

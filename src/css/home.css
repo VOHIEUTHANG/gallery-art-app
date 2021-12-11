@@ -508,7 +508,7 @@ h2.main-title {
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s linear;
+  transition: all 0.5s linear;
   background: white;
   display: flex;
   flex-direction: column;

@@ -322,12 +322,6 @@ input {
 	font-family: "Readex Pro", sans-serif;
 }
 
-.sign-form,
-.sign_email-invalid,
-.sign_incorrect {
-	display: none;
-}
-
 .sign_address {
 	display: flex;
 	flex-wrap: wrap;

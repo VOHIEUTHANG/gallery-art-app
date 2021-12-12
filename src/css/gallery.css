@@ -10,10 +10,12 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 /* item 1 */

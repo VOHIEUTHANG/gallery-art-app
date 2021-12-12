@@ -49,7 +49,7 @@
   white-space: nowrap;
 }
 .foo_sub {
-  background: var(--pl-color-4);
+  background: #222832;
   padding: 20px 0;
   text-align: center;
   color: white;

@@ -38,12 +38,12 @@ $(document).ready(function () {
 //slider profile
 $(document).ready(function () {
     var slideIndex = 0;
-    showSlides();
+    sliders();
 
-    function showSlides() {
+    function sliders() {
         var i;
-        var slides = document.getElementsByClassName("our-mems_cards"); // ==> class name 1 slide tu dat
-        var dots = document.getElementsByClassName("our-mems_dot"); // ==> class name 1 dot tu dat
+        var slides = document.getElementsByClassName("our-mems_cards");
+        var dots = document.getElementsByClassName("our-mems_dot");
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
@@ -54,6 +54,6 @@ $(document).ready(function () {
         }
         slides[slideIndex - 1].style.display = "flex";
         dots[slideIndex - 1].className += " our-mems_dotted";
-        setTimeout(showSlides, 5000);
+        setTimeout(sliders, 4000);
     }
 })

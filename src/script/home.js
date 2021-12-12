@@ -68,7 +68,6 @@ $(function () {
     const section5 = $('.contact-section');
 
     const mainTitle = $(".main-title");
-    console.log(mainTitle);
     const galleryItem = $(".gallery-item");
     const galleryList = $(".exhibitions-gallery");
     const galleryContainer = $('.exhibitions-container');
@@ -104,7 +103,6 @@ $(function () {
                                     mainTitle[1].classList.add("show");
                                     break;
                                 case section3[0]:
-                                    console.log(mainTitle[2]);
                                     mainTitle[2].classList.add("show");
                                     break;
                                 case section4[0]:
@@ -126,12 +124,46 @@ $(function () {
                 observer.observe(section3[0]);
                 observer.observe(section4[0]);
                 observer.observe(section5[0]);
-                // observer.observe(gallerySection[0]);
+                const galleryObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            window.scroll({
+                                top: entry.target.offsetTop,
+                                behavior: 'smooth'
+                            })
+                            header.removeClass('show');
+                            header.addClass('hide')
+                        }
 
+                    })
+                }, {
+                    threshold: 0.8
+                })
+                galleryObserver.observe(galleryContainer[0]);
+
+            },
+            handleSlide() {
+                $(window).on('load', function () {
+                    galleryItem[0].classList.add('active');
+                    console.log($(".gallery-item.active"));
+                    let index = 0;
+                    const unitWidth = galleryItem.width();
+                    galleryItem.click(function () {
+                        $(".gallery-item.active").removeClass('active')
+                        const currentIMG = $(this).children('img')
+                        const imgSrc = currentIMG.attr('src')
+                        $(this).addClass('active');
+                        galleryContainer.css({
+                            'background-image': `url("${imgSrc}")`,
+                            'opacity': 1,
+                        })
+                    })
+                })
             },
             run() {
                 this.hoverHandle();
                 this.scrollHandle();
+                this.handleSlide();
             }
         }
     }

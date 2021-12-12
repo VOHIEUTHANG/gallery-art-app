@@ -61,84 +61,81 @@ $(function () {
 })
 // SECTION 4 - START ========================
 $(function () {
-    // const galleryItem = $(".gallery-item");
+    const section1 = $('.artists-section');
+    const section2 = $('.exhibitions-section');
+    const section3 = $('.visit-section');
+    const section4 = $('.artBlog-section');
+    const section5 = $('.contact-section');
+
+    const mainTitle = $(".main-title");
+    console.log(mainTitle);
+    const galleryItem = $(".gallery-item");
     const galleryList = $(".exhibitions-gallery");
     const galleryContainer = $('.exhibitions-container');
+    const gallerySection = $('.exhibitions-section')
     const header = $('.hea_nav');
-    galleryContainer.mouseenter(function () {
-        header.removeClass('show');
-        header.addClass('hide');
-    })
-    galleryContainer.mouseleave(function () {
-        header.removeClass('hide');
-        header.addClass('show');
-    })
-    // const nextBtn = $(".gallery-ct-next");
-    // const prevBtn = $(".gallery-ct-prev");
-    // galleryItem.click(function () {
-    //     galleryContainer.css('opacity', '0');
-    //     $(".gallery-item.active").removeClass("active");
-    //     $(this).addClass("active")
-    //     const imgActive = $(".gallery-item.active > img");
-    //     newURL = `url('${imgActive.attr('src')}')`;
-    //     $('.exhibitions-container').css({
-    //         'background-image': newURL
-    //     })
-    //     galleryContainer.css('opacity', '1');
-    // })
-    // // SLIDE HANDLER
-    // const galleryItemAmount = galleryItem.length;
-    // const firstItem = galleryItem[0];
-    // const lastItem = galleryItem[galleryItem.length - 1];
-    // let galleryCount;
-    // //Media loaded handle
-    // $(window).on('load', function () {
-    //     galleryCount = Math.round(galleryList.width() / galleryItem.width())
-    //     const { right } = lastItem.getBoundingClientRect();
-    //     const { left } = firstItem.getBoundingClientRect();
-    // })
-    // let translateValue = 0;
-    // nextBtn.click(function () {
-    //     translateValue -= 100 / galleryCount;
-    //     galleryList.css({
-    //         transform: `translateX(${translateValue}%)`
-    //     })
-    //     const { right } = lastItem.getBoundingClientRect();
-    //     const { left } = firstItem.getBoundingClientRect();
-    //     console.log("left", left);
-    //     console.log("right", right);
-    // })
-    // prevBtn.click(function () {
-    //     translateValue += 100 / galleryCount;
-    //     galleryList.css({
-    //         transform: `translateX(${translateValue}%)`
-    //     })
-    //     const { right } = lastItem.getBoundingClientRect();
-    //     const { left } = firstItem.getBoundingClientRect();
-    //     console.log("left", left);
-    //     console.log("right", right);
-    // })
+    // GL VARIABLES ===================
+    function main() {
+        return {
+            hoverHandle() {
+                galleryContainer.mouseenter(function () {
+                    header.removeClass('show');
+                    header.addClass('hide');
+                    // window.scroll({
+                    //     top: galleryContainer[0].offsetTop,
+                    //     behavior: 'smooth'
+                    // });
+                })
+                galleryContainer.mouseleave(function () {
+                    header.removeClass('hide');
+                    header.addClass('show');
+                })
+            },
+            scrollHandle() {
+                galleryContainer.addClass('show');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            switch (entry.target) {
+                                case section1[0]:
+                                    mainTitle[0].classList.add("show");
+                                    break;
+                                case section2[0]:
+                                    mainTitle[1].classList.add("show");
+                                    break;
+                                case section3[0]:
+                                    console.log(mainTitle[2]);
+                                    mainTitle[2].classList.add("show");
+                                    break;
+                                case section4[0]:
+                                    mainTitle[3].classList.add("show");
+                                    break;
+                                case section5[0]:
+                                    mainTitle[4].classList.add("show");
+                                    break;
+                                default:
+                                    throw new Error('Invalid title observer')
+                            }
+                        }
+                    })
+                }, {
+                    threshold: 0.6
+                })
+                observer.observe(section1[0]);
+                observer.observe(section2[0]);
+                observer.observe(section3[0]);
+                observer.observe(section4[0]);
+                observer.observe(section5[0]);
+                // observer.observe(gallerySection[0]);
 
-    $(window).on('load', () => {
-        const item = $('.artBlog-item');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    !entry.target.classList.contains('show') && entry.target.classList.add('show')
-                }
-            })
-        });
-        [...item].forEach(item => {
-            observer.observe(item)
-        });
-    })
-    // $(window).scroll(function () {
-    //     const curHeight = window.scrollY;
-    //     window.scroll({
-    //         top: curHeight,
-    //         behavior: 'smooth'
-    //     });
-    // })
+            },
+            run() {
+                this.hoverHandle();
+                this.scrollHandle();
+            }
+        }
+    }
+    main().run();
 })
 // SECTION 5 -  START  ========================
 $(function () {

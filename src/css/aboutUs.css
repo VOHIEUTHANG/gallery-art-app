@@ -1,36 +1,21 @@
-body {
-	font-size: 12px;
-	flex-wrap: wrap;
-}
-
-body::-webkit-scrollbar-thumb {
-	background: linear-gradient(to bottom, #2b2b28, #595260, #B2B1B9);
-	border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(to bottom, #2b2b28, #595260, #B2B1B9);
-	border-radius: 5px;
-}
-
-body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
 .home {
 	color: var(--pl-color-3);
 }
 
 .content-container > p {
 	color: var(--pl-color-4);
-	font-weight: 600;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.content-container {
+	padding: 10px;
 }
 
 /* ===== thumb ===== */
 .thumb {
 	background-color: var(--pl-color-1);
-	padding: 30px 100px;
+	padding: 30px 120px;
 }
 
 .thumb_title > h1 {
@@ -52,14 +37,16 @@ body::-webkit-scrollbar {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	padding-bottom: 20px;
 }
 
 .thumb_content-col-left {
-	margin-right: 35px;
+	margin-right: 25px;
 	line-height: 1.5;
 }
 
 .thumb_content-col-right {
+	margin-left: 25px;
 	line-height: 1.5;
 }
 
@@ -165,13 +152,13 @@ body::-webkit-scrollbar {
 }
 
 .mem_thumb {
-	padding-top: 15px;
+	padding-top: 25px;
 	padding-bottom: 0;
 	transition: 0.5s;
 }
 
 .our-mems_single-card:hover .mem_thumb {
-	transform: translateY(-35px);
+	transform: translateY(-30px);
 	transition-delay: 0.2s;
 }
 
@@ -182,7 +169,7 @@ body::-webkit-scrollbar {
 	transition: 0.25s;
 	margin: 0 auto;
 	border-radius: 50%;
-	border: 4px solid var(--pl-color-2);
+	border: 4px solid #bdbdbd;
 }
 
 .mems_intro {
@@ -194,7 +181,7 @@ body::-webkit-scrollbar {
 }
 
 .our-mems_single-card:hover .mems_intro {
-	margin-top: -40px;
+	margin-top: -30px;
 	transition-delay: 0.2s;
 	opacity: 1;
 	visibility: visible;
@@ -203,19 +190,18 @@ body::-webkit-scrollbar {
 .single-card_img > img {
 	width: 100%;
 	height: 100%;
-	/* object-fit: cover;
-  object-position: center; */
 }
 
 .mem_thumb > h3 {
-	color: var(--pl-color-1);
-	margin-top: 20px;
+	color: var(--pl-color-3);
+	margin-top: 35px;
 	text-align: center;
 }
 
 .mem_thumb > p {
 	color: var(--pl-color-1);
 	text-align: center;
+	font-size: 17px;
 }
 
 .mems_contact {
@@ -249,7 +235,7 @@ body::-webkit-scrollbar {
 	height: 15px;
 	width: 15px;
 	margin: 0 2px;
-	background-color: #2b2b284d;
+	background-color: #bdbdbd;
 	border-radius: 50%;
 	display: inline-block;
 	transition: background-color 0.6s ease;
@@ -261,9 +247,9 @@ body::-webkit-scrollbar {
 
 /* ===== Sign-up ===== */
 .sign-up {
-	margin-top: 30px;
-	padding-top: 30px;
-	padding-bottom: 50px;
+	margin-top: 40px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 	background-image: url("../../assets/images/AboutUsIMG/BG-paper-pattern.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -272,7 +258,6 @@ body::-webkit-scrollbar {
 }
 
 .sign-up > h2 {
-	padding-top: 20px;
 	text-align: center;
 	font-size: 50px;
 	font-weight: 700;
@@ -282,12 +267,16 @@ body::-webkit-scrollbar {
 	padding: 10px 0;
 	text-align: center;
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 600;
+}
+
+.sign-up > form {
+	padding: 15px 0;
 }
 
 .sign-up > h4 {
 	margin-top: 10px;
-	font-size: 30px;
+	font-size: 28px;
 	font-weight: 700;
 	text-align: center;
 }
@@ -309,6 +298,7 @@ input {
 	border: none;
 	border-bottom: var(--pl-color-1) solid 1px;
 	color: var(--pl-color-1);
+	font-size: 16px;
 }
 
 .sign_btn-submit {
@@ -319,7 +309,7 @@ input {
 	border-bottom: var(--pl-color-3) solid 3px;
 	color: var(--pl-color-3);
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 600;
 	align-items: center;
 	text-align: center;
 	margin-top: 10px;

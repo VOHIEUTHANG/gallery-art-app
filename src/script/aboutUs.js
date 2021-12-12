@@ -1,7 +1,7 @@
 // fade in numbers
 // $(document).ready(function() {
 //     $(".why_bg-dark").mouseenter(function() {
-//         $(".reason").(1000);
+//         $(".reason").slideUp(1000);
 //     })
 // })
 

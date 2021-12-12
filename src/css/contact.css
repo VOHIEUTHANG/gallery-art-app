@@ -1,7 +1,33 @@
 /* Set the size of the div element that contains the map */
+.page5-container > p {
+    color: var(--pl-color-4);
+    font-weight: 500;
+  }
 #map {
-    height: 400px;
+    height: 500px;
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
   }
+ 
+#contact {
+    background-image: rgb(250, 244, 244) url('') 
+    no-repeat center center/cover;
+    height: 50vh;
+    
+}
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+  
+}
+.contact-form  {
+
+    margin-left: 40%;
+   
+}

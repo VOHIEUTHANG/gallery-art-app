@@ -61,25 +61,22 @@
         </nav>
       </header>
       <div class="page5-container">
-        <p style="display: block; margin: 20px 0; text-align: center">
-          <a href="../index.html" class="home">Home</a> &nbsp; | &nbsp; Contacts
-        </p>
+        <p style="display: block; margin: 20px 0; text-align: center"><a href="../index.html" class="home">Home</a>
+          &nbsp; | &nbsp; Contacts </p>
       </div>
       <div class="content-container">
-        <!-- code ở đây nè ... -->
-      </div>
-    </div>
-    <!--The div element for the map -->
-    <div id="map"></div>
+        <h1 style="display: block; margin: 120px 0; text-align: center">
+          Find us
+        </h1>
+      
+      <!--The div element for the map -->
+      <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5116160603584!2d106.78350311471911!3d10.848637492272568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752713216a3adf%3A0xf8b22853eea72777!2zOTcgxJDGsOG7nW5nIE1hbiBUaGnhu4duLCBIaeG7h3AgUGjDuiwgUXXhuq1uIDksIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1639281997535!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2"
-      async
-    ></script>
-    <!-- Section: Contact  -->
+     
+      <!-- Section: Contact  -->
     <section id="contact">
-      <div class="contact-form bg-primary p-2">
+
+      <div class="contact-form  ">
           <h2 class="m-heading">Get in touch with us...</h2>
           <p>Typical response time can take up to one business day</p>
           <form>
@@ -94,48 +91,50 @@
               <div class="form-group">
                   <label for="review">Your Review</label>
                   <input type="text" review="review" id="review" placeholder="">
-              
+            
               <input type="submit" value="Send" class="btn btn-dark">
 
           </form>
       </div>
-         <footer id="footer" class="footer">
-        <div class="foo_main-container">
-          <div class="container">
-            <div class="foo_main-img">
-              <img src="../assets/images/Logo.png" alt="" />
+    </div>
+    <footer id="footer" class="footer">
+      <div class="foo_main-container">
+        <div class="container">
+          <div class="foo_main-img">
+            <img src="../assets/images/Logo.png" alt="" />
+          </div>
+          <h3 class="foo_main-title">
+            … experience the amazing art on exhibit!
+          </h3>
+          <div class="foo_contact">
+            <div class="foo_contact-item phone">
+              <div class="icon-wrapper"><i class="fas fa-phone-alt"></i></div>
+              <span>123-456-7890</span>
             </div>
-            <h3 class="foo_main-title">
-              … experience the amazing art on exhibit!
-            </h3>
-            <div class="foo_contact">
-              <div class="foo_contact-item phone">
-                <div class="icon-wrapper"><i class="fas fa-phone-alt"></i></div>
-                <span>123-456-7890</span>
+            <div class="foo_contact-item">
+              <div class="icon-wrapper">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
-              <div class="foo_contact-item">
-                <div class="icon-wrapper">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <span>
-                  9401 N Meridian St, Indianapolis,
-                  <br />
-                  IN 46260, United States
-                </span>
-              </div>
+              <span>
+                9401 N Meridian St, Indianapolis,
+                <br />
+                IN 46260, United States
+              </span>
             </div>
           </div>
         </div>
-        <div class="foo_sub">
-          <div class="container">
-            <p class="foo_sub-title">
-              ExhibitA © 2020. All rights reserved. |&nbsp;&nbsp;
-              <a href="#">Privacy Policy</a>&nbsp;|&nbsp;&nbsp;<a href="#"
-                >Terms of Use</a
-              >
-            </p>
-          </div>
+      </div>
+      <div class="foo_sub">
+        <div class="container">
+          <p class="foo_sub-title">
+            ExhibitA © 2020. All rights reserved. |&nbsp;&nbsp;
+            <a href="#">Privacy Policy</a>&nbsp;|&nbsp;&nbsp;<a href="#"
+              >Terms of Use</a
+            >
+          </p>
         </div>
-      </footer>
-  </body>
+      </div>
+    </footer>
+  </div>
+    </body>
 </html>

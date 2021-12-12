@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Art Bar | CONTACTS</title>
+    <title>Gallery Art | CONTACTS</title>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +37,7 @@
         <div class="hea_spacer"></div>
         <div class="hea_logo-wrapper">
           <a href="./index.html"
-            ><img src="../assets/images/Logo.png" alt=""
+            ><img src="../assets/images/logoweb2white-01.png" alt=""
           /></a>
         </div>
         <nav class="hea_nav">
@@ -76,24 +76,25 @@
       <!-- Section: Contact  -->
     <section id="contact">
 
-      <div class="contact-form  ">
-          <h2 class="m-heading">Get in touch with us...</h2>
-          <p>Typical response time can take up to one business day</p>
-          <form>
+      <div class="contact-form-wrapper">
+          <div class="contact-form">
+            <h2 class="m-heading">Get in touch with us...</h2>
+          <p class="contact-form-description">Typical response time can take up to one business day</p>
+          <form class="contact-form-input">
               <div class="form-group">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" id="name" placeholder="">
+                  <label class="label-contact-input" for="name">Your Name</label>
+                  <input class="contact-input" type="text" name="name" id="name" placeholder="" required>
               </div>
               <div class="form-group">
-                  <label for="email">Your Email</label>
-                  <input type="text" email="email" id="email" placeholder="">
+                  <label class="label-contact-input" for="email">Your Email</label>
+                  <input class="contact-input" type="text" email="email" id="email" placeholder="" required>
               </div>
               <div class="form-group">
-                  <label for="review">Your Review</label>
-                  <input type="text" review="review" id="review" placeholder="">
+                  <label class="label-contact-input" for="review">Your Review</label>
+                  <textarea class="contact-input" type="text" review="review" id="review" placeholder="" required></textarea>
             
-              <input type="submit" value="Send" class="btn btn-dark">
-
+                </div>
+                <input type="submit" value="Submit" class="btn btn-dark">
           </form>
       </div>
     </div>

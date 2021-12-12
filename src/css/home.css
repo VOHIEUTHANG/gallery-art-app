@@ -289,7 +289,7 @@ h2.main-title {
 .exhibitions-container {
   height: 100vh;
   background: black;
-  background-image: url("../../assets/images/HomePageIMG/Home-section1-bg2.jpg");
+  background-image: url("../../assets/images/HomePageIMG/Slide-1.jpg");
   transition: all 0.6s ease;
   background-repeat: no-repeat;
   background-size: cover;
@@ -508,7 +508,7 @@ h2.main-title {
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.5s linear;
+  transition: all 0.4s ease;
   background: white;
   display: flex;
   flex-direction: column;
@@ -527,18 +527,13 @@ h2.main-title {
   letter-spacing: 0px;
   color: #666;
   border-radius: 20px;
-  border: 1px solid #ccc;
-  transition: all 0.3s ease-in;
+  border: 1px solid rgb(236, 234, 234);
+  transition: all 0.2s ease-in;
 }
 .artBlog-button:hover {
-  background: var(--primary-color);
-  background: linear-gradient(
-    to right,
-    rgb(5, 235, 235, 0.3),
-    rgb(236, 137, 236, 0.4),
-    rgb(240, 240, 23, 0.4)
-  );
   box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+  background: var(--primary-color);
+  color: white;
 }
 .artBlog-item:hover {
   transform: translateY(-10px);

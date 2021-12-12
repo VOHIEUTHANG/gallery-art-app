@@ -61,11 +61,21 @@
   align-items: center;
 }
 .header .hea_nav.fixed {
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: var(--pl-color-4);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s ease;
   z-index: 100;
+  transform-origin: top left;
+}
+.header .hea_nav.fixed.hide {
+  opacity: 0;
+  transform: rotateX(90deg);
+}
+.header .hea_nav.fixed.show {
+  opacity: 1;
 }

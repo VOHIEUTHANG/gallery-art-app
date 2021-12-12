@@ -62,8 +62,17 @@ $(function () {
 // SECTION 4 - START ========================
 $(function () {
     // const galleryItem = $(".gallery-item");
-    // const galleryList = $(".exhibitions-gallery");
-    // const galleryContainer = $('.exhibitions-container');
+    const galleryList = $(".exhibitions-gallery");
+    const galleryContainer = $('.exhibitions-container');
+    const header = $('.hea_nav');
+    galleryContainer.mouseenter(function () {
+        header.removeClass('show');
+        header.addClass('hide');
+    })
+    galleryContainer.mouseleave(function () {
+        header.removeClass('hide');
+        header.addClass('show');
+    })
     // const nextBtn = $(".gallery-ct-next");
     // const prevBtn = $(".gallery-ct-prev");
     // galleryItem.click(function () {
@@ -109,12 +118,12 @@ $(function () {
     //     console.log("left", left);
     //     console.log("right", right);
     // })
+
     $(window).on('load', () => {
         const item = $('.artBlog-item');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    console.log(entry.target);
                     !entry.target.classList.contains('show') && entry.target.classList.add('show')
                 }
             })
@@ -123,6 +132,13 @@ $(function () {
             observer.observe(item)
         });
     })
+    // $(window).scroll(function () {
+    //     const curHeight = window.scrollY;
+    //     window.scroll({
+    //         top: curHeight,
+    //         behavior: 'smooth'
+    //     });
+    // })
 })
 // SECTION 5 -  START  ========================
 $(function () {

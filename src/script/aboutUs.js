@@ -1,7 +1,7 @@
 // fade in numbers
 // $(document).ready(function() {
 //     $(".why_bg-dark").mouseenter(function() {
-//         $(".reason").(1000);
+//         $(".reason").slideUp(1000);
 //     })
 // })
 
@@ -38,9 +38,9 @@ $(document).ready(function () {
 //slider profile
 $(document).ready(function () {
     var slideIndex = 0;
-    showSlides();
+    sliders();
 
-    function showSlides() {
+    function sliders() {
         var i;
         var slides = document.getElementsByClassName("our-mems_cards");
         var dots = document.getElementsByClassName("our-mems_dot");
@@ -54,6 +54,6 @@ $(document).ready(function () {
         }
         slides[slideIndex - 1].style.display = "flex";
         dots[slideIndex - 1].className += " our-mems_dotted";
-        setTimeout(showSlides, 5000);
+        setTimeout(sliders, 4000);
     }
 })

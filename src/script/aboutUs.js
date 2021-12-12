@@ -42,8 +42,8 @@ $(document).ready(function () {
 
     function showSlides() {
         var i;
-        var slides = document.getElementsByClassName("our-mems_cards");
-        var dots = document.getElementsByClassName("our-mems_dot");
+        var slides = document.getElementsByClassName("our-mems_cards"); // ==> class name 1 slide tu dat
+        var dots = document.getElementsByClassName("our-mems_dot"); // ==> class name 1 dot tu dat
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }

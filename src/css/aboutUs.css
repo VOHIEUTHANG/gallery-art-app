@@ -4,8 +4,13 @@ body {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #2b2b28, #595260, #B2B1B9);
-  border-radius: 5px;
+	background: linear-gradient(to bottom, #2b2b28, #595260, #B2B1B9);
+	border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to bottom, #2b2b28, #595260, #B2B1B9);
+	border-radius: 5px;
 }
 
 body::-webkit-scrollbar {
@@ -113,7 +118,7 @@ body::-webkit-scrollbar {
 
 .why_reasons-item > h3 {
 	font-size: 24px;
-  font-weight: 600;
+	font-weight: 500;
 }
 
 /* ===== Members ===== */
@@ -177,7 +182,7 @@ body::-webkit-scrollbar {
 	transition: 0.25s;
 	margin: 0 auto;
 	border-radius: 50%;
-	border: 4px solid var(--pl-color-3);
+	border: 4px solid var(--pl-color-2);
 }
 
 .mems_intro {
@@ -202,7 +207,7 @@ body::-webkit-scrollbar {
   object-position: center; */
 }
 
-.mem_thumb > h2 {
+.mem_thumb > h3 {
 	color: var(--pl-color-1);
 	margin-top: 20px;
 	text-align: center;
@@ -298,6 +303,7 @@ input {
 	background-color: rgba(255, 255, 255, 0.03);
 	width: 400px;
 	height: 50px;
+	font-family: "Readex Pro", sans-serif;
 	margin-right: 10px;
 	margin-top: 10px;
 	border: none;
@@ -313,16 +319,17 @@ input {
 	border-bottom: var(--pl-color-3) solid 3px;
 	color: var(--pl-color-3);
 	font-size: 18px;
-	font-family: "Playfair Display", serif;
 	font-weight: bold;
 	align-items: center;
 	text-align: center;
 	margin-top: 10px;
+	font-family: "Readex Pro", sans-serif;
 }
 
 .sign_btn-submit:hover {
 	background-color: var(--pl-color-3);
 	color: var(--pl-color-1);
+	font-family: "Readex Pro", sans-serif;
 }
 
 .sign-form,

@@ -96,14 +96,9 @@ body::-webkit-scrollbar-track {
   background: rgba(230, 230, 230);
 }
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, aqua, yellow, violet);
+  background: var(--primary-color);
   border-radius: 20px;
 }
 body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(37, 184, 184),
-    rgb(192, 192, 59),
-    rgb(177, 97, 177)
-  );
+  background: rgb(167, 179, 60);
 }

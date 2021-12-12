@@ -68,7 +68,38 @@
       <div class="content-container">
         <!-- code ở đây nè ... -->
       </div>
-      <footer id="footer" class="footer">
+    </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2"
+      async
+    ></script>
+    <!-- Section: Contact  -->
+    <section id="contact">
+      <div class="contact-form bg-primary p-2">
+          <h2 class="m-heading">Get in touch with us...</h2>
+          <p>Typical response time can take up to one business day</p>
+          <form>
+              <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" id="name" placeholder="">
+              </div>
+              <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="text" email="email" id="email" placeholder="">
+              </div>
+              <div class="form-group">
+                  <label for="review">Your Review</label>
+                  <input type="text" review="review" id="review" placeholder="">
+              
+              <input type="submit" value="Send" class="btn btn-dark">
+
+          </form>
+      </div>
+         <footer id="footer" class="footer">
         <div class="foo_main-container">
           <div class="container">
             <div class="foo_main-img">
@@ -106,36 +137,5 @@
           </div>
         </div>
       </footer>
-    </div>
-    <!--The div element for the map -->
-    <div id="map"></div>
-
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2"
-      async
-    ></script>
-    <!-- Section: Contact  -->
-    <section id="contact">
-      <div class="contact-form bg-primary p-2">
-          <h2 class="m-heading">Get in touch with us...</h2>
-          <p>Typical response time can take up to one business day</p>
-          <form>
-              <div class="form-group">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" id="name" placeholder="">
-              </div>
-              <div class="form-group">
-                  <label for="email">Your Email</label>
-                  <input type="text" email="email" id="email" placeholder="">
-              </div>
-              <div class="form-group">
-                  <label for="review">Your Review</label>
-                  <input type="text" review="review" id="review" placeholder="">
-              
-              <input type="submit" value="Send" class="btn btn-dark">
-
-          </form>
-      </div>
   </body>
 </html>

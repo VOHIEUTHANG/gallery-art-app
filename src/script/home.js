@@ -145,7 +145,6 @@ $(function () {
             handleSlide() {
                 $(window).on('load', function () {
                     galleryItem[0].classList.add('active');
-                    console.log($(".gallery-item.active"));
                     let index = 0;
                     const unitWidth = galleryItem.width();
                     galleryItem.click(function () {

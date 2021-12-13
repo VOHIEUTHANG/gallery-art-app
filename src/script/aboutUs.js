@@ -37,9 +37,26 @@ $(document).ready(function () {
 
 //slider profile
 $(document).ready(function () {
+    // const cards = $('.our-mems_cards');
+    // const dotsctl = $(".our-mems_dot");
     var slideIndex = 0;
+    let timerID;
     sliders();
-
+    // cards.mouseover(function () {
+    //     timerID && clearTimeout(timerID);
+    // })
+    // cards.mouseleave(function () {
+    //     timerID = setInterval(() => {
+    //         sliders();
+    //     }, 4000);
+    // })
+    // dotsctl.click(function () {
+    //     timerID && clearTimeout(timerID);
+    //     sliders();
+    //     timerID = setInterval(() => {
+    //         sliders();
+    //     }, 4000);
+    // })
     function sliders() {
         var i;
         var slides = document.getElementsByClassName("our-mems_cards");
@@ -50,10 +67,13 @@ $(document).ready(function () {
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
         for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" our-mems_dotted", "");
+            // dots[i].className = dots[i].className.replace(" our-mems_dotted", "");
+            dots[i].classList.contains('our-mems_dotted') && dots[i].classList.remove('our-mems_dotted');
         }
         slides[slideIndex - 1].style.display = "flex";
-        dots[slideIndex - 1].className += " our-mems_dotted";
-        setTimeout(sliders, 4000);
+        dots[slideIndex - 1].classList.add('our-mems_dotted');
     }
+    timerID = setInterval(() => {
+        sliders();
+    }, 4000);
 })

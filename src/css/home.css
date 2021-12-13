@@ -11,8 +11,6 @@ h2.main-title {
   opacity: 0;
 }
 h2.main-title.show {
-  /* color: var(--primary-color); */
-  /* letter-spacing: 2px; */
   transform: translateY(0px);
   opacity: 1;
 }
@@ -39,7 +37,6 @@ h2.main-title.main-title--white {
 .intro_main {
   padding: 60px 15px 60px 15px;
   background-image: url(../../assets/images/HomePageIMG/Home-decorate.png);
-
   background-repeat: no-repeat;
   background-position: left top;
   color: white;
@@ -49,7 +46,7 @@ h2.main-title.main-title--white {
   font-weight: 700;
   font-size: 3.6rem;
   line-height: 2;
-  animation: slidTtB 1s ease-in;
+  animation: fadeIn 0.2s linear;
 }
 
 .intro_main-title {

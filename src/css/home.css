@@ -11,8 +11,6 @@ h2.main-title {
   opacity: 0;
 }
 h2.main-title.show {
-  /* color: var(--primary-color); */
-  /* letter-spacing: 2px; */
   transform: translateY(0px);
   opacity: 1;
 }
@@ -39,7 +37,6 @@ h2.main-title.main-title--white {
 .intro_main {
   padding: 60px 15px 60px 15px;
   background-image: url(../../assets/images/HomePageIMG/Home-decorate.png);
-
   background-repeat: no-repeat;
   background-position: left top;
   color: white;
@@ -49,7 +46,7 @@ h2.main-title.main-title--white {
   font-weight: 700;
   font-size: 3.6rem;
   line-height: 2;
-  animation: slidTtB 1s ease-in;
+  animation: fadeIn 0.2s linear;
 }
 
 .intro_main-title {
@@ -292,6 +289,41 @@ h2.main-title.main-title--white {
 .exhibitions-section {
   padding: 110px 0;
 }
+.magnet {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+}
+.magnet > i {
+  position: relative;
+  font-size: 8rem;
+  color: rgb(236, 54, 93);
+  transition: all 1s ease;
+}
+.magnet > i::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  background: blue;
+  box-shadow: -50px 0 0 0 blue;
+}
+.magnet.show {
+  visibility: visible;
+  opacity: 1;
+}
+.magnet.show > i {
+  transform: scale(3);
+  opacity: 0;
+}
 .exhibitions-title {
   text-align: center;
   font-size: 4.8rem;
@@ -302,77 +334,45 @@ h2.main-title.main-title--white {
 .exhibitions-container {
   height: 100vh;
   background: black;
-  background-image: url("../../assets/images/HomePageIMG/Slide-1.jpg");
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
   overflow: hidden;
-  /* transform-origin: top left; */
-  transform: translateX(-100%);
   opacity: 0;
+}
+.exhibition-controls {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+}
+.exhibition-controls-next,
+.exhibition-controls-prev {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+.exhibition-controls-next {
+  right: 0;
+}
+.exhibition-controls-prev {
+  left: 0;
 }
 .exhibitions-container.show {
   transform: translateX(0);
-
-  opacity: 1;
-}
-
-.exhibitions-container:hover > .exhibitions-gallery-container {
-  visibility: visible;
   opacity: 1;
 }
 .exhibitions-gallery-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s linear;
-}
-.exhibitions-gallery-container:hover > .gallery-ct {
-  visibility: visible;
-  opacity: 1;
-}
-.exhibitions-gallery {
+  width: auto;
+  height: 100vh;
   display: flex;
-  position: relative;
-  transition: all 0.4s linear;
-  transition: all 0.2s linear;
-  opacity: 0.7;
-}
-.exhibitions-gallery:hover {
-  opacity: 1;
 }
 .gallery-item {
-  position: relative;
-  width: calc(100% / 7);
-  flex-wrap: nowrap;
   flex-shrink: 0;
-  flex-grow: 0;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  z-index: 1;
-  opacity: 0.6;
-  filter: brightness(50%);
-  border-radius: 4px;
-}
-.gallery-item:hover {
-  z-index: 2;
-  opacity: 1;
-  filter: brightness(90%);
-  transform: translateY(-10px);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.gallery-item.active {
-  opacity: 1;
-  transform: scale(1.1) translateY(-20px);
-  filter: brightness(120%);
-  z-index: 10;
-  box-shadow: 0 20px 40px 10px black;
-  border-radius: 5px;
+  width: 100vw;
+  height: 100%;
 }
 .gallery-item > img {
   display: block;
@@ -380,32 +380,6 @@ h2.main-title.main-title--white {
   object-fit: cover;
 }
 
-.gallery-ct {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 20;
-  cursor: pointer;
-  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s linear;
-}
-.gallery-ct > i {
-  font-size: 2rem;
-  color: white;
-}
-.gallery-ct.disable {
-  cursor: default !important;
-  opacity: 0.3 !important;
-  background-color: rgba(0, 0, 0, 0.3) !important;
-}
 .gallery-ct-prev {
   left: 0;
 }

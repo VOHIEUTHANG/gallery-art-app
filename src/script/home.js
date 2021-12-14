@@ -13,14 +13,10 @@ $(function () {
     const autoSlideDuration = 5000;
     const slidehandler = () => {
         $('.introduce-section').css({
-            'background-image': `url(${backgroundsSRC[index]})`,
-            opacity: 1
+            'background-image': `url(${backgroundsSRC[index]})`
         })
     };
     dots.click(function () {
-        $('.introduce-section').css({
-            'opacity': 0
-        })
         dots.removeClass('active');
         $(this).addClass('active');
         clearInterval(intervalID);
@@ -57,7 +53,6 @@ $(function () {
         }, autoSlideDuration)
     }
     autoSlide();
-
 })
 // SECTION 4 - START ========================
 $(function () {
@@ -127,6 +122,10 @@ $(function () {
                 const galleryObserver = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
+                            $('.magnet').addClass('show');
+                            setTimeout(() => {
+                                $('.magnet').removeClass('show');
+                            }, 1000);
                             window.scroll({
                                 top: entry.target.offsetTop,
                                 behavior: 'smooth'
@@ -134,30 +133,82 @@ $(function () {
                             header.removeClass('show');
                             header.addClass('hide')
                         }
-
                     })
                 }, {
-                    threshold: 0.8
+                    threshold: 0.7
                 })
                 galleryObserver.observe(galleryContainer[0]);
 
             },
             handleSlide() {
                 $(window).on('load', function () {
-                    galleryItem[0].classList.add('active');
-                    console.log($(".gallery-item.active"));
-                    let index = 0;
-                    const unitWidth = galleryItem.width();
-                    galleryItem.click(function () {
-                        $(".gallery-item.active").removeClass('active')
-                        const currentIMG = $(this).children('img')
-                        const imgSrc = currentIMG.attr('src')
-                        $(this).addClass('active');
-                        galleryContainer.css({
-                            'background-image': `url("${imgSrc}")`,
-                            'opacity': 1,
+                    const slideContainer = $('.exhibitions-gallery-container')
+                    let slideItems = $(".gallery-item")
+                    const prevbtn = $('.exhibition-controls-prev');
+                    const nextbtn = $('.exhibition-controls-next');
+                    let index = 1;
+                    let intervalID;
+                    const intervalDuration = 3000;
+                    const firstClone = slideItems[0].cloneNode(true);
+                    const lastClone = slideItems[slideItems.length - 1].cloneNode(true);
+                    firstClone.id = 'firstClone';
+                    lastClone.id = 'lastClone';
+                    slideContainer.append(firstClone);
+                    slideContainer.prepend(lastClone);
+                    const slideWidth = slideItems[0].clientWidth;
+                    function slide(isTransition = true) {
+                        slideContainer.css({
+                            transform: `translateX(-${slideWidth * index}px)`,
+                            transition: `${isTransition ? 'all 0.4s ease' : 'none'}`
                         })
+                    }
+                    slide();
+                    function autoSlide() {
+                        intervalID = setInterval(() => {
+                            moveToNextSlide();
+                        }, intervalDuration);
+                    }
+                    autoSlide();
+                    const updateSlides = () => { slideItems = $(".gallery-item") }
+                    slideContainer[0].addEventListener('transitionend', () => {
+                        updateSlides();
+                        const lastItem = slideItems.length - 1;
+                        console.log(index);
+                        if (index >= lastItem || slideItems[index].id === firstClone.id) {
+                            index = 1;
+                            slideContainer.css('transition', 'none')
+                            slide(false);
+                        }
+                        if (index < 0 || slideItems[index].id === lastClone.id) {
+                            index = slideItems.length - 2;
+                            slideContainer.css('transition', 'none')
+                            slide(false);
+                        }
                     })
+                    function moveToNextSlide() {
+                        if (index >= slideItems.length - 1) return;
+                        updateSlides();
+                        index++;
+                        slide();
+                    }
+                    function moveToPreviousSlide() {
+                        if (index <= 0) return;
+                        updateSlides();
+                        index--;
+                        slide();
+                    }
+                    // Handle click
+                    nextbtn.click(function () {
+                        moveToNextSlide();
+                        clearInterval(intervalID);
+                        autoSlide();
+                    })
+                    prevbtn.click(function () {
+                        moveToPreviousSlide();
+                        clearInterval(intervalID);
+                        autoSlide();
+                    })
+
                 })
             },
             run() {

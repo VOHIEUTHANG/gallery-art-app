@@ -8,9 +8,6 @@
   justify-content: center;
   align-items: center;
 }
-.hea_spacer {
-  height: 30px;
-}
 .hea_nav {
   display: flex;
   justify-content: center;

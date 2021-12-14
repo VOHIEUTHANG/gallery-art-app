@@ -31,7 +31,7 @@ $(document).ready(function () {
 // Slider Profiles
 $(document).ready(function () {
     var autoIndex = 0;
-    var timeOut = setInterval(function() {
+    var timeOut = setInterval(function () {
         autoSlides();
     }, 4000);
     sliders();
@@ -85,14 +85,14 @@ $(document).ready(function () {
         $("#slide-1 .our-mems_single-card").mouseleave(function () {
             sliders();
             autoIndex++;
-            timeOut = setInterval(function() {
+            timeOut = setInterval(function () {
                 autoSlides();
             }, 4000)
         })
         $("#slide-2 .our-mems_single-card").mouseover(function () {
             sliders();
             autoIndex++;
-            timeOut = setInterval(function() {
+            timeOut = setInterval(function () {
                 autoSlides();
             }, 4000)
         })

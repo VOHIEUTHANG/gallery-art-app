@@ -15,6 +15,7 @@ h2.main-title.show {
   opacity: 1;
 }
 h2.main-title.main-title--white {
+  margin-bottom: 30px;
   color: white;
 }
 /* ============== SECTION 1 ============== */
@@ -35,7 +36,9 @@ h2.main-title.main-title--white {
   padding-top: 80px;
 }
 .intro_main {
-  padding: 60px 15px 60px 15px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 60px 30px 60px 30px;
   background-image: url("../../assets/images/HomePageIMG/Home-decorate.png");
   background-repeat: no-repeat;
   background-position: left top;
@@ -51,7 +54,7 @@ h2.main-title.main-title--white {
 
 .intro_main-title {
   font-weight: 700;
-  font-size: 9rem;
+  font-size: 7rem;
   line-height: 1.1;
   letter-spacing: 4px;
   animation: slideLtR 1s ease-in-out;
@@ -145,7 +148,7 @@ h2.main-title.main-title--white {
   padding: 0 15px;
 }
 .event-des {
-  padding: 110px 0;
+  padding: 80px 0;
   background: var(--primary-bg);
   display: flex;
   flex-direction: column;
@@ -249,6 +252,7 @@ h2.main-title.main-title--white {
 }
 .artists-list {
   display: flex;
+  flex-wrap: wrap;
 }
 .artists-item {
   flex: 0 0 25%;
@@ -297,7 +301,7 @@ h2.main-title.main-title--white {
   transition: all 1s ease;
 }
 .exhibitions-container {
-  height: 100vh;
+  max-height: 100vh;
   background: black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -374,10 +378,11 @@ h2.main-title.main-title--white {
 }
 .visit-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .visit-item {
-  flex-wrap: wrap;
-  margin: 0 15px;
+  flex: 0 0 32%;
   padding-bottom: 20px;
   transition: all 01s ease-in-out;
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -449,6 +454,9 @@ h2.main-title.main-title--white {
   transition: 0.2s ease-out;
   transform: scale(0);
 }
+.visit-overlay > img:hover {
+  transform: brightness(120%) scale(1.2);
+}
 
 .visit-overlay > .close {
   position: absolute;
@@ -470,6 +478,8 @@ h2.main-title.main-title--white {
 }
 .artBlog-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .artBlog-item {
   flex: 1;
@@ -506,7 +516,8 @@ h2.main-title.main-title--white {
 }
 .artBlog-img {
   overflow: hidden;
-  height: 50%;
+  flex-shrink: 0;
+  height: 46%;
 }
 .artBlog-body {
   flex: 1;
@@ -625,6 +636,8 @@ h2.main-title.main-title--white {
 }
 .contact-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .contact-form {
   margin: 0 15px;
@@ -793,5 +806,54 @@ h2.main-title.main-title--white {
   to {
     transform: scale(2);
     opacity: 0;
+  }
+}
+
+/*================= RESPONSIVE =================*/
+@media screen and (max-width: 1200px) {
+  html {
+    /* font-size: 50%; */
+  }
+  .intro_main-title {
+    font-size: 6rem;
+  }
+  .intro_sub-title {
+    font-size: 5rem;
+  }
+  .event-des-wrapper {
+    flex: 0 0 100%;
+  }
+  .event-des-layout {
+    width: unset;
+  }
+  .artists-item {
+    flex: 0 0 50%;
+  }
+  .visit-item {
+    flex: 0 0 60%;
+    margin-bottom: 40px;
+  }
+  .container {
+    padding: 0 100px;
+  }
+  .artists-section {
+    padding: 60px;
+  }
+  .artBlog-item {
+    flex: 0 0 50%;
+    margin-bottom: 40px;
+  }
+  .flex-item.flex-item-form {
+    flex: 0 0 80%;
+  }
+  .flex-item.flex-item-social {
+    flex: 0 0 100%;
+    margin-top: 60px;
+  }
+  .contact-section {
+    padding: 110px 0;
+  }
+  .event-img {
+    display: none;
   }
 }

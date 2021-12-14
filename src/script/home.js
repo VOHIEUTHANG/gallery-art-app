@@ -54,6 +54,32 @@ $(function () {
     }
     autoSlide();
 })
+// SECTION 2 - START ========================
+$(function () {
+    const numNode = $('.es-number');
+    function randomNumber(start, end) {
+        return Math.floor(Math.random() * (end + 1 - start)) + start;
+    }
+    const updateNum = (selector, startNum, endNum) => {
+        for (let i = startNum; i <= endNum; i++) {
+            setTimeout(() => {
+                selector.innerText = i;
+            }, 10);
+        }
+    }
+    const initValue1 = 5000;
+    const initValue2 = 1000;
+    updateNum(numNode[0], 0, initValue1);
+    updateNum(numNode[1], 0, initValue2);
+    const ID = setInterval(() => {
+        updateNum(numNode[0], 0, Number(numNode[0].innerText) + randomNumber(1, 300));
+        updateNum(numNode[1], 0, Number(numNode[1].innerText) + randomNumber(1, 10));
+    }, 5000);
+    setTimeout(() => {
+        clearInterval(ID)
+    }, 180000);
+
+})
 // SECTION 4 - START ========================
 $(function () {
     const section1 = $('.artists-section');
@@ -144,7 +170,7 @@ $(function () {
                     const nextbtn = $('.exhibition-controls-next');
                     let index = 1;
                     let intervalID;
-                    const intervalDuration = 5000;
+                    const intervalDuration = 3000;
                     const firstClone = slideItems[0].cloneNode(true);
                     const lastClone = slideItems[slideItems.length - 1].cloneNode(true);
                     firstClone.id = 'firstClone';

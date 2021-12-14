@@ -36,7 +36,7 @@ h2.main-title.main-title--white {
 }
 .intro_main {
   padding: 60px 15px 60px 15px;
-  background-image: url(../../assets/images/HomePageIMG/Home-decorate.png);
+  background-image: url("../../assets/images/HomePageIMG/Home-decorate.png");
   background-repeat: no-repeat;
   background-position: left top;
   color: white;
@@ -289,41 +289,6 @@ h2.main-title.main-title--white {
 .exhibitions-section {
   padding: 110px 0;
 }
-.magnet {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
-}
-.magnet > i {
-  position: relative;
-  font-size: 8rem;
-  color: rgb(236, 54, 93);
-  transition: all 1s ease;
-}
-.magnet > i::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-radius: 3px;
-  width: 20px;
-  height: 20px;
-  background: blue;
-  box-shadow: -50px 0 0 0 blue;
-}
-.magnet.show {
-  visibility: visible;
-  opacity: 1;
-}
-.magnet.show > i {
-  transform: scale(3);
-  opacity: 0;
-}
 .exhibitions-title {
   text-align: center;
   font-size: 4.8rem;
@@ -339,6 +304,7 @@ h2.main-title.main-title--white {
   background-position: center center;
   position: relative;
   overflow: hidden;
+  cursor: none;
   opacity: 0;
 }
 .exhibition-controls {
@@ -359,6 +325,17 @@ h2.main-title.main-title--white {
 }
 .exhibition-controls-prev {
   left: 0;
+}
+.exhibition-controls-next.clicked,
+.exhibition-controls-prev.clicked {
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: clicked 0.4s ease infinite alternate;
+}
+@keyframes clicked {
+  to {
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+  }
 }
 .exhibitions-container.show {
   transform: translateX(0);
@@ -490,9 +467,6 @@ h2.main-title.main-title--white {
 /* =============== SECTION 6 ================= */
 .artBlog-section {
   padding: 110px 0;
-}
-
-.main-title {
 }
 .artBlog-list {
   display: flex;
@@ -634,8 +608,6 @@ h2.main-title.main-title--white {
   background-position: center center;
   box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
 }
-.container {
-}
 .contact-container {
   overflow: hidden;
   color: white;
@@ -755,4 +727,71 @@ h2.main-title.main-title--white {
 .contact-media-item > i {
   color: #333;
   font-size: 23px;
+}
+
+/* customize cursor */
+.cursor {
+  width: 140px;
+  height: 140px;
+  border: 3px solid white;
+  position: absolute;
+  z-index: 1000;
+  transition: all 0.2s ease-out;
+  border-radius: 50%;
+  pointer-events: none;
+  visibility: hidden;
+}
+.cursor > .left,
+.cursor > .right {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  display: none;
+}
+.right > i,
+.left > i {
+  font-size: 20px;
+}
+.right > span,
+.left > span {
+  font-size: 1.5rem;
+}
+.cursor.right > .right {
+  display: block;
+}
+.cursor.right > .left {
+  display: none;
+}
+.cursor.left > .left {
+  display: block;
+}
+.cursor.left > .right {
+  display: none;
+}
+.cursor.show {
+  visibility: visible;
+}
+.cursor::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 140px;
+  height: 140px;
+  border: 10px solid var(--primary-color);
+  border-radius: 50%;
+  animation: expand 0.2s ease alternate infinite;
+  visibility: hidden;
+}
+.cursor.expand::after {
+  visibility: visible;
+}
+@keyframes expand {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
 }

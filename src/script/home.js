@@ -122,10 +122,6 @@ $(function () {
                 const galleryObserver = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
-                            $('.magnet').addClass('show');
-                            setTimeout(() => {
-                                $('.magnet').removeClass('show');
-                            }, 1000);
                             window.scroll({
                                 top: entry.target.offsetTop,
                                 behavior: 'smooth'
@@ -135,7 +131,7 @@ $(function () {
                         }
                     })
                 }, {
-                    threshold: 0.7
+                    threshold: 0.9
                 })
                 galleryObserver.observe(galleryContainer[0]);
 
@@ -148,7 +144,7 @@ $(function () {
                     const nextbtn = $('.exhibition-controls-next');
                     let index = 1;
                     let intervalID;
-                    const intervalDuration = 3000;
+                    const intervalDuration = 5000;
                     const firstClone = slideItems[0].cloneNode(true);
                     const lastClone = slideItems[slideItems.length - 1].cloneNode(true);
                     firstClone.id = 'firstClone';
@@ -159,7 +155,7 @@ $(function () {
                     function slide(isTransition = true) {
                         slideContainer.css({
                             transform: `translateX(-${slideWidth * index}px)`,
-                            transition: `${isTransition ? 'all 0.4s ease' : 'none'}`
+                            transition: `${isTransition ? 'all 0.6s ease-out' : 'none'}`
                         })
                     }
                     slide();
@@ -173,7 +169,6 @@ $(function () {
                     slideContainer[0].addEventListener('transitionend', () => {
                         updateSlides();
                         const lastItem = slideItems.length - 1;
-                        console.log(index);
                         if (index >= lastItem || slideItems[index].id === firstClone.id) {
                             index = 1;
                             slideContainer.css('transition', 'none')
@@ -199,22 +194,60 @@ $(function () {
                     }
                     // Handle click
                     nextbtn.click(function () {
+                        $(this).addClass('clicked')
                         moveToNextSlide();
                         clearInterval(intervalID);
                         autoSlide();
+                        $('.cursor').addClass('expand');
+                        setTimeout(() => {
+                            $('.cursor').removeClass('expand');
+                            nextbtn.removeClass('clicked');
+                        }, 400);
                     })
                     prevbtn.click(function () {
+                        $(this).addClass('clicked')
                         moveToPreviousSlide();
                         clearInterval(intervalID);
                         autoSlide();
+                        $('.cursor').addClass('expand');
+                        setTimeout(() => {
+                            $('.cursor').removeClass('expand');
+                            prevbtn.removeClass('clicked');
+                        }, 500);
                     })
 
+                })
+            },
+            customCursor() {
+                const cursor = $('.cursor');
+                const monitorWidth = $(window).width();
+                $('.exhibitions-container').mousemove(function (e) {
+                    cursor.hasClass('show') || cursor.addClass('show');
+                    if (e.pageX > monitorWidth / 2) {
+                        if (cursor.hasClass('left')) {
+                            cursor.removeClass('left');
+                            cursor.addClass('right')
+                        }
+                    } else {
+                        if (cursor.hasClass('right')) {
+                            cursor.removeClass('right');
+                            cursor.addClass('left')
+                        }
+                    }
+                    cursor.css({
+                        top: e.pageY - 70,
+                        left: e.pageX - 70
+                    })
+                })
+                $('.exhibitions-container').mouseleave(function () {
+                    cursor.hasClass('show') && cursor.removeClass('show');
                 })
             },
             run() {
                 this.hoverHandle();
                 this.scrollHandle();
                 this.handleSlide();
+                this.customCursor();
             }
         }
     }
@@ -233,5 +266,13 @@ $(function () {
         e.stopPropagation();
         $(this).css('visibility', 'hidden');
         $(this).children('img').css('transform', 'scale(0)');
+    })
+})
+
+
+// CUSTOMIZE CURSOR
+$(function () {
+    document.addEventListener('click', () => {
+
     })
 })

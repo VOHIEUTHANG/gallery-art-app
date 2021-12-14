@@ -71,12 +71,12 @@ $(document).ready(function () {
     }
 
     function hoverToStopSlider() {
-        $("#slide-1 .our-mems_single-card").mouseover(function () {
+        $("#slide-1 .our-mems_single-card").mouseenter(function () {
             autoIndex = 0;
             sliders();
             clearInterval(timeOut);
         })
-        $("#slide-2 .our-mems_single-card").mouseover(function () {
+        $("#slide-2 .our-mems_single-card").mouseenter(function () {
             autoIndex = 1;
             sliders();
             clearInterval(timeOut);
@@ -89,7 +89,7 @@ $(document).ready(function () {
                 autoSlides();
             }, 4000)
         })
-        $("#slide-2 .our-mems_single-card").mouseover(function () {
+        $("#slide-2 .our-mems_single-card").mouseleave(function () {
             sliders();
             autoIndex++;
             timeOut = setInterval(function () {

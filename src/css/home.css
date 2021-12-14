@@ -54,7 +54,7 @@ h2.main-title.main-title--white {
 
 .intro_main-title {
   font-weight: 700;
-  font-size: 7rem;
+  font-size: 10rem;
   line-height: 1.1;
   letter-spacing: 4px;
   animation: slideLtR 1s ease-in-out;
@@ -84,7 +84,7 @@ h2.main-title.main-title--white {
 }
 .intro_sub-title {
   font-weight: 400;
-  font-size: 9rem;
+  font-size: 6rem;
   line-height: 1.1;
   margin-left: 80px;
   animation: fadeIn 1s linear;
@@ -658,6 +658,7 @@ h2.main-title.main-title--white {
   font-size: 18px;
   padding: 8px 0;
   margin-bottom: 20px;
+  font-family: "Readex Pro", san-serif;
 }
 
 .contact-form > .message {
@@ -670,6 +671,7 @@ h2.main-title.main-title--white {
   height: 100px;
   resize: none;
   border-radius: 4px;
+  font-family: "Readex Pro", san-serif;
 }
 .contact-form > .button {
   width: fit-content;
@@ -682,6 +684,8 @@ h2.main-title.main-title--white {
   transition: all 0.4s ease-out;
   border-bottom: 3px solid transparent;
   border-top: 3px solid transparent;
+  font-family: "Readex Pro", san-serif;
+  font-weight: bold;
 }
 .contact-form > .button:hover {
   border-bottom: 3px solid var(--primary-color);
@@ -815,10 +819,10 @@ h2.main-title.main-title--white {
     /* font-size: 50%; */
   }
   .intro_main-title {
-    font-size: 6rem;
+    font-size: 10rem;
   }
   .intro_sub-title {
-    font-size: 5rem;
+    font-size: 6rem;
   }
   .event-des-wrapper {
     flex: 0 0 100%;

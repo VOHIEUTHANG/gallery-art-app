@@ -1,11 +1,4 @@
-// fade in numbers
-// $(document).ready(function() {
-//     $(".why_bg-dark").mouseenter(function() {
-//         $(".reason").slideUp(1000);
-//     })
-// })
-
-// countUp 
+// countUp
 $(document).ready(function () {
     const first = document.querySelector('.rea-1')
     const second = document.querySelector('.rea-2')
@@ -35,45 +28,73 @@ $(document).ready(function () {
     })
 })
 
-//slider profile
+// Slider Profiles
 $(document).ready(function () {
-    // const cards = $('.our-mems_cards');
-    // const dotsctl = $(".our-mems_dot");
-    var slideIndex = 0;
-    let timerID;
+    var autoIndex = 0;
+    var timeOut = setInterval(function() {
+        autoSlides();
+    }, 4000);
     sliders();
-    // cards.mouseover(function () {
-    //     timerID && clearTimeout(timerID);
-    // })
-    // cards.mouseleave(function () {
-    //     timerID = setInterval(() => {
-    //         sliders();
-    //     }, 4000);
-    // })
-    // dotsctl.click(function () {
-    //     timerID && clearTimeout(timerID);
-    //     sliders();
-    //     timerID = setInterval(() => {
-    //         sliders();
-    //     }, 4000);
-    // })
+    autoSlides();
+    clickSlide();
+    hoverToStopSlider();
+
     function sliders() {
-        var i;
         var slides = document.getElementsByClassName("our-mems_cards");
         var dots = document.getElementsByClassName("our-mems_dot");
-        for (i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        for (i = 0; i < dots.length; i++) {
-            // dots[i].className = dots[i].className.replace(" our-mems_dotted", "");
-            dots[i].classList.contains('our-mems_dotted') && dots[i].classList.remove('our-mems_dotted');
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" our-mems_dotted", "");
         }
-        slides[slideIndex - 1].style.display = "flex";
-        dots[slideIndex - 1].classList.add('our-mems_dotted');
+        if (autoIndex >= slides.length) { autoIndex = 0 }
+        slides[autoIndex].style.display = "flex";
+        dots[autoIndex].className += " our-mems_dotted";
     }
-    timerID = setInterval(() => {
+
+    function autoSlides() {
         sliders();
-    }, 4000);
+        autoIndex++;
+        timeOut;
+    }
+
+    function clickSlide() {
+        $("#dot_1").click(function () {
+            autoIndex = 0;
+            sliders();
+        })
+        $("#dot_2").click(function () {
+            autoIndex = 1;
+            sliders();
+        })
+    }
+
+    function hoverToStopSlider() {
+        $("#slide-1 .our-mems_single-card").mouseover(function () {
+            autoIndex = 0;
+            sliders();
+            clearInterval(timeOut);
+        })
+        $("#slide-2 .our-mems_single-card").mouseover(function () {
+            autoIndex = 1;
+            sliders();
+            clearInterval(timeOut);
+        })
+
+        $("#slide-1 .our-mems_single-card").mouseleave(function () {
+            sliders();
+            autoIndex++;
+            timeOut = setInterval(function() {
+                autoSlides();
+            }, 4000)
+        })
+        $("#slide-2 .our-mems_single-card").mouseover(function () {
+            sliders();
+            autoIndex++;
+            timeOut = setInterval(function() {
+                autoSlides();
+            }, 4000)
+        })
+    }
 })

@@ -51,7 +51,7 @@
   white-space: nowrap;
 }
 .foo_sub {
-  background: #222832;
+  background: var(--pl-color-4);
   padding: 20px 0;
   text-align: center;
   color: white;

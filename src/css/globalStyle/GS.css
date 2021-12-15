@@ -53,7 +53,7 @@ ul {
   transition: bottom 0.3s ease, background 0.1s linear, opacity 0.3s linear;
 }
 .gototop:hover {
-  background: rgb(13, 4, 49) !important;
+  background: var(--pl-color-4) !important;
 }
 .gototop.show {
   opacity: 1 !important;
@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 body::-webkit-scrollbar-thumb:hover {
-  background: rgb(167, 179, 60);
+  background: #FDCA40;
 }
 /* ============ Change color selection ============ */
 ::-moz-selection {

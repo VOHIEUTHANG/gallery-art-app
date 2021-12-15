@@ -33,7 +33,7 @@ h2.main-title.main-title--white {
   transition: all 0.4s ease-in;
 }
 .intro_spacer {
-  padding-top: 80px;
+  padding-top: 50px;
 }
 .intro_main {
   max-width: 90%;
@@ -236,7 +236,6 @@ h2.main-title.main-title--white {
   height: 100%;
   object-fit: cover;
 }
-
 /* ============== SECTION 3 ============== */
 
 .artists-section {
@@ -289,7 +288,60 @@ h2.main-title.main-title--white {
   color: #666;
   margin-bottom: 15px;
 }
+
 /* ============== SECTION 4 ============== */
+.gallery-section {
+  padding: 80px 0;
+  background-image: url("../../assets/images/HomePageIMG/gallerys/white-wall.jpg");
+  box-shadow: 0 0 0 10000px inset rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.gallery-title-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+h2.gallery-main-title.main-title {
+  color: white;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+.gallery-container {
+  margin: 50px 0;
+}
+.gallery-list {
+  display: flex;
+  padding: 40px 0;
+  user-select: none;
+  align-items: center;
+}
+.gallery-item {
+  width: 400px;
+  height: 400px;
+  max-height: 400px;
+  padding: 0 55px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.gallery-img {
+  max-height: 400px;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.gallery-img:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.gallery-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ============== SECTION 5 ============== */
 .exhibitions-section {
   padding: 110px 0;
 }
@@ -332,7 +384,7 @@ h2.main-title.main-title--white {
 }
 .exhibition-controls-next.clicked,
 .exhibition-controls-prev.clicked {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   animation: clicked 0.4s ease infinite alternate;
 }
 @keyframes clicked {
@@ -347,15 +399,15 @@ h2.main-title.main-title--white {
 }
 .exhibitions-gallery-container {
   width: auto;
-  height: 100vh;
+  max-height: 100vh;
   display: flex;
 }
-.gallery-item {
+.exhibition-item {
   flex-shrink: 0;
   width: 100vw;
   height: 100%;
 }
-.gallery-item > img {
+.exhibition-item > img {
   display: block;
   width: 100%;
   object-fit: cover;
@@ -371,7 +423,7 @@ h2.main-title.main-title--white {
   background: rgba(255, 255, 255, 0.4);
   box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 40px 10px;
 }
-/* ============== SECTION 5 ============== */
+/* ============== SECTION 6 ============== */
 .visit-section {
   padding: 110px 0;
   background: var(--primary-bg);
@@ -391,7 +443,8 @@ h2.main-title.main-title--white {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: -100%;
+  left: 0;
+  opacity: 0;
   top: 0;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -411,7 +464,7 @@ h2.main-title.main-title--white {
   cursor: pointer;
 }
 .visit-img:hover > .visit-hover-layer {
-  left: 0;
+  opacity: 1;
 }
 .visit-img:hover > img {
   transform: scale(1.1);
@@ -472,7 +525,7 @@ h2.main-title.main-title--white {
   color: rgb(195, 72, 72);
 }
 
-/* =============== SECTION 6 ================= */
+/* =============== SECTION 7 ================= */
 .artBlog-section {
   padding: 110px 0;
 }
@@ -611,7 +664,7 @@ h2.main-title.main-title--white {
   text-shadow: 0 0 20px white 0 0 50px white;
   transform: scale(1.1);
 }
-/* =================== SECTION 7 =================== */
+/* =================== SECTION 8 =================== */
 .contact-section {
   padding: 110px;
   background-image: url("../../assets/images/HomePageIMG/Home-section7.jpg");

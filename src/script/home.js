@@ -56,6 +56,30 @@ $(function () {
 })
 // SECTION 2 - START ========================
 $(function () {
+    const galleryItem = $('.gallery-item');
+    const galleryIMGS = $('.gallery-item  img');
+    const galleryItemWidth = galleryItem.outerWidth();
+    const gallerytList = $('.gallery-list');
+    const listWidth = galleryItemWidth * galleryItem.length;
+    const galleryContainer = $('.gallery-container');
+    gallerytList.css('width', listWidth);
+    galleryContainer.css('width', listWidth);
+    const slideShow = $('.gallery-list')[0].animate([
+        { transform: 'translateX(0px)' },
+        { transform: `translateX(${-listWidth / 2}px)` }
+    ], {
+        duration: 30000,
+        iterations: Infinity,
+    });
+    galleryIMGS.mouseenter(function () {
+        slideShow.pause();
+    })
+    galleryIMGS.mouseleave(function () {
+        slideShow.play();
+    })
+})
+//SECTION 3 - START ==========================
+$(function () {
     const numNode = $('.es-number');
     function randomNumber(start, end) {
         return Math.floor(Math.random() * (end + 1 - start)) + start;
@@ -83,13 +107,14 @@ $(function () {
 // SECTION 4 - START ========================
 $(function () {
     const section1 = $('.artists-section');
-    const section2 = $('.exhibitions-section');
+    const section2 = $('.gallery-section');
     const section3 = $('.visit-section');
-    const section4 = $('.artBlog-section');
-    const section5 = $('.contact-section');
+    const section4 = $('.exhibitions-section');
+    const section5 = $('.artBlog-section');
+    const section6 = $('.contact-section');
 
     const mainTitle = $(".main-title");
-    const galleryItem = $(".gallery-item");
+    const galleryItem = $(".exhibition-item");
     const galleryList = $(".exhibitions-gallery");
     const galleryContainer = $('.exhibitions-container');
     const gallerySection = $('.exhibitions-section')
@@ -132,19 +157,23 @@ $(function () {
                                 case section5[0]:
                                     mainTitle[4].classList.add("show");
                                     break;
+                                case section6[0]:
+                                    mainTitle[5].classList.add("show");
+                                    break;
                                 default:
                                     throw new Error('Invalid title observer')
                             }
                         }
                     })
                 }, {
-                    threshold: 0.6
+                    threshold: 0.4
                 })
                 observer.observe(section1[0]);
                 observer.observe(section2[0]);
                 observer.observe(section3[0]);
                 observer.observe(section4[0]);
                 observer.observe(section5[0]);
+                observer.observe(section6[0]);
                 const galleryObserver = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
@@ -157,7 +186,7 @@ $(function () {
                         }
                     })
                 }, {
-                    threshold: 0.9
+                    threshold: 0.98
                 })
                 galleryObserver.observe(galleryContainer[0]);
 
@@ -165,7 +194,7 @@ $(function () {
             handleSlide() {
                 $(window).on('load', function () {
                     const slideContainer = $('.exhibitions-gallery-container')
-                    let slideItems = $(".gallery-item")
+                    let slideItems = $(".exhibition-item")
                     const prevbtn = $('.exhibition-controls-prev');
                     const nextbtn = $('.exhibition-controls-next');
                     let index = 1;
@@ -191,7 +220,7 @@ $(function () {
                         }, intervalDuration);
                     }
                     autoSlide();
-                    const updateSlides = () => { slideItems = $(".gallery-item") }
+                    const updateSlides = () => { slideItems = $(".exhibition-item") }
                     slideContainer[0].addEventListener('transitionend', () => {
                         updateSlides();
                         const lastItem = slideItems.length - 1;

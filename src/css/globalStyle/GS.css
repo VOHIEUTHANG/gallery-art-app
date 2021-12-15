@@ -103,3 +103,12 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: rgb(167, 179, 60);
 }
+/* ============ Change color selection ============ */
+::-moz-selection {
+  color: red;
+  background: yellow;
+}
+::selection {
+  color: var(--primary-color);
+  background: var(--pl-color-4);
+}

@@ -1,4 +1,4 @@
-// SECTION 1 - START ========================
+// INTRODUCE HANDLER ========================
 $(function () {
     let path = $('.introduce-section').css('background-image')
     path = path.slice(5, path.length - 2);
@@ -54,31 +54,31 @@ $(function () {
     }
     autoSlide();
 })
-// SECTION 2 - START ========================
+// GALLERY HANDLER  ========================
 $(function () {
-    const galleryItem = $('.gallery-item');
-    const galleryIMGS = $('.gallery-item  img');
-    const galleryItemWidth = galleryItem.outerWidth();
-    const gallerytList = $('.gallery-list');
-    const listWidth = galleryItemWidth * galleryItem.length;
-    const galleryContainer = $('.gallery-container');
-    gallerytList.css('width', listWidth);
-    galleryContainer.css('width', listWidth);
-    const slideShow = $('.gallery-list')[0].animate([
-        { transform: 'translateX(0px)' },
-        { transform: `translateX(${-listWidth / 2}px)` }
-    ], {
-        duration: 30000,
-        iterations: Infinity,
-    });
-    galleryIMGS.mouseenter(function () {
-        slideShow.pause();
-    })
-    galleryIMGS.mouseleave(function () {
-        slideShow.play();
-    })
+    // const galleryItem = $('.gallery-item');
+    // const galleryIMGS = $('.gallery-item  img');
+    // const galleryItemWidth = galleryItem.outerWidth();
+    // const gallerytList = $('.gallery-list');
+    // const listWidth = galleryItemWidth * galleryItem.length;
+    // const galleryContainer = $('.gallery-container');
+    // gallerytList.css('width', listWidth);
+    // galleryContainer.css('width', listWidth);
+    // const slideShow = $('.gallery-list')[0].animate([
+    //     { transform: 'translateX(0px)' },
+    //     { transform: `translateX(${-listWidth / 2}px)` }
+    // ], {
+    //     duration: 30000,
+    //     iterations: Infinity,
+    // });
+    // galleryIMGS.mouseenter(function () {
+    //     slideShow.pause();
+    // })
+    // galleryIMGS.mouseleave(function () {
+    //     slideShow.play();
+    // })
 })
-//SECTION 3 - START ==========================
+//AUTO COUNT HANDLER ==========================
 $(function () {
     const numNode = $('.es-number');
     function randomNumber(start, end) {
@@ -93,18 +93,18 @@ $(function () {
     }
     const initValue1 = 5000;
     const initValue2 = 1000;
-    updateNum(numNode[0], 0, initValue1);
-    updateNum(numNode[1], 0, initValue2);
-    const ID = setInterval(() => {
-        updateNum(numNode[0], 0, Number(numNode[0].innerText) + randomNumber(1, 300));
-        updateNum(numNode[1], 0, Number(numNode[1].innerText) + randomNumber(1, 10));
-    }, 5000);
-    setTimeout(() => {
-        clearInterval(ID)
-    }, 180000);
+    // updateNum(numNode[0], 0, initValue1);
+    // updateNum(numNode[1], 0, initValue2);
+    // const ID = setInterval(() => {
+    //     updateNum(numNode[0], 0, Number(numNode[0].innerText) + randomNumber(1, 300));
+    //     updateNum(numNode[1], 0, Number(numNode[1].innerText) + randomNumber(1, 10));
+    // }, 5000);
+    // setTimeout(() => {
+    //     clearInterval(ID)
+    // }, 180000);
 
 })
-// SECTION 4 - START ========================
+//ARTWORKS HANDLER ========================
 $(function () {
     const section1 = $('.artists-section');
     const section2 = $('.gallery-section');
@@ -308,7 +308,7 @@ $(function () {
     }
     main().run();
 })
-// SECTION 5 -  START  ========================
+// VISITITEM HANDLER  ========================
 $(function () {
     $('.visit-img').click(function () {
         $(this).children('.visit-overlay').css('visibility', 'visible');
@@ -321,13 +321,5 @@ $(function () {
         e.stopPropagation();
         $(this).css('visibility', 'hidden');
         $(this).children('img').css('transform', 'scale(0)');
-    })
-})
-
-
-// CUSTOMIZE CURSOR
-$(function () {
-    document.addEventListener('click', () => {
-
     })
 })

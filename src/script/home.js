@@ -56,27 +56,27 @@ $(function () {
 })
 // GALLERY HANDLER  ========================
 $(function () {
-    // const galleryItem = $('.gallery-item');
-    // const galleryIMGS = $('.gallery-item  img');
-    // const galleryItemWidth = galleryItem.outerWidth();
-    // const gallerytList = $('.gallery-list');
-    // const listWidth = galleryItemWidth * galleryItem.length;
-    // const galleryContainer = $('.gallery-container');
-    // gallerytList.css('width', listWidth);
-    // galleryContainer.css('width', listWidth);
-    // const slideShow = $('.gallery-list')[0].animate([
-    //     { transform: 'translateX(0px)' },
-    //     { transform: `translateX(${-listWidth / 2}px)` }
-    // ], {
-    //     duration: 30000,
-    //     iterations: Infinity,
-    // });
-    // galleryIMGS.mouseenter(function () {
-    //     slideShow.pause();
-    // })
-    // galleryIMGS.mouseleave(function () {
-    //     slideShow.play();
-    // })
+    const galleryItem = $('.gallery-item');
+    const galleryIMGS = $('.gallery-item  img');
+    const galleryItemWidth = galleryItem.outerWidth();
+    const gallerytList = $('.gallery-list');
+    const listWidth = galleryItemWidth * galleryItem.length;
+    const galleryContainer = $('.gallery-container');
+    gallerytList.css('width', listWidth);
+    galleryContainer.css('width', listWidth);
+    const slideShow = $('.gallery-list')[0].animate([
+        { transform: 'translateX(0px)' },
+        { transform: `translateX(${-listWidth / 2}px)` }
+    ], {
+        duration: 30000,
+        iterations: Infinity,
+    });
+    galleryIMGS.mouseenter(function () {
+        slideShow.pause();
+    })
+    galleryIMGS.mouseleave(function () {
+        slideShow.play();
+    })
 })
 // ANIMATE HANDLER   ========================
 $(function () {
@@ -141,10 +141,6 @@ $(function () {
                 galleryContainer.mouseenter(function () {
                     header.removeClass('show');
                     header.addClass('hide');
-                    // window.scroll({
-                    //     top: galleryContainer[0].offsetTop,
-                    //     behavior: 'smooth'
-                    // });
                 })
                 galleryContainer.mouseleave(function () {
                     header.removeClass('hide');
@@ -189,22 +185,6 @@ $(function () {
                 observer.observe(section4[0]);
                 observer.observe(section5[0]);
                 observer.observe(section6[0]);
-                const galleryObserver = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            window.scroll({
-                                top: entry.target.offsetTop,
-                                behavior: 'smooth'
-                            })
-                            header.removeClass('show');
-                            header.addClass('hide')
-                        }
-                    })
-                }, {
-                    threshold: 0.98
-                })
-                galleryObserver.observe(galleryContainer[0]);
-
             },
             handleSlide() {
                 $(window).on('load', function () {

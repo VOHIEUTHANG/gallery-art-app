@@ -33,7 +33,7 @@ $(document).ready(function () {
     var autoIndex = 0;
     var timeOut = setInterval(function () {
         autoSlides();
-    }, 4000);
+    }, 3000);
     sliders();
     autoSlides();
     clickSlide();
@@ -87,14 +87,14 @@ $(document).ready(function () {
             autoIndex++;
             timeOut = setInterval(function () {
                 autoSlides();
-            }, 4000)
+            }, 3000)
         })
         $("#slide-2 .our-mems_single-card").mouseleave(function () {
             sliders();
             autoIndex++;
             timeOut = setInterval(function () {
                 autoSlides();
-            }, 4000)
+            }, 3000)
         })
     }
 })

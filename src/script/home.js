@@ -81,7 +81,6 @@ $(function () {
 // ANIMATE HANDLER   ========================
 $(function () {
     const artists = $('.artists-item');
-    const visits = $('.visit-item');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             entry.isIntersecting && entry.target.classList.add("show");
@@ -92,9 +91,6 @@ $(function () {
     [...artists].forEach(item => {
         observer.observe(item);
     });
-    [...visits].forEach(item => {
-        observer.observe(item);
-    })
 })
 //AUTO COUNT HANDLER ==========================
 $(function () {
@@ -327,18 +323,19 @@ $(function () {
     }
     main().run();
 })
-// VISITITEM HANDLER  ========================
+// VISITITEM HANDLER ========================
 $(function () {
     $('.visit-img').click(function () {
-        $(this).children('.visit-overlay').css('visibility', 'visible');
-        $(this).find('.visit-overlay > img').css('transform', 'scale(1)')
+        $(this).children('.visit-overlay').addClass('show');
+        $(this).children('.visit-overlay').css('transition', 'transform 0.4s ease');
     })
     $('.visit-overlay > img').click(function (e) {
         e.stopPropagation();
     })
     $('.visit-overlay').click(function (e) {
         e.stopPropagation();
-        $(this).css('visibility', 'hidden');
-        $(this).children('img').css('transform', 'scale(0)');
+        $(this).removeClass('show');
+        $(this).css('transition', 'none');
     })
 })
+

@@ -718,6 +718,13 @@ h2.gallery-main-title.main-title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 60px;
+  transition: opacity 1s ease;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.contact-sub-heading.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .contact-wrapper {
   display: flex;
@@ -733,6 +740,13 @@ h2.gallery-main-title.main-title {
   border-radius: 8px;
   color: #333;
   padding: 40px;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.6s ease-in;
+}
+.contact-form.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .contact-form > h3 {
   margin-bottom: 20px;
@@ -818,10 +832,23 @@ h2.gallery-main-title.main-title {
   transition: all 0.2s linear;
   box-shadow: 0 0 0 var(--primary-color) inset;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(40px);
+}
+.contact-media-item.show {
+  animation: sequentiallySlide 0.6s ease-in forwards;
+}
+.contact-media-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.contact-media-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.contact-media-item:nth-child(4) {
+  animation-delay: 0.6s;
 }
 .contact-media-item:hover {
   box-shadow: 0 -100px 0 var(--primary-color) inset;
-  transform: scale(1.1);
 }
 .contact-media-item:hover > i {
   color: white !important;
@@ -831,6 +858,12 @@ h2.gallery-main-title.main-title {
   font-size: 23px;
 }
 
+@keyframes sequentiallySlide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* customize cursor */
 .cursor {
   width: 140px;

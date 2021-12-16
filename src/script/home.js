@@ -81,7 +81,7 @@ $(function () {
 // ANIMATE HANDLER   ========================
 $(function () {
     const artists = $('.artists-item');
-    const observer = new IntersectionObserver((entries) => {
+    const observerArtists = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             entry.isIntersecting && entry.target.classList.add("show");
         })
@@ -89,8 +89,26 @@ $(function () {
         threshold: 0.5
     });
     [...artists].forEach(item => {
-        observer.observe(item);
+        observerArtists.observe(item);
     });
+    //CONTACT ANIMATION HANDLER
+    const subHeading = $('.contact-sub-heading');
+    const form = $('.contact-form');
+    const medias = $('.contact-media-item');
+    const observerContact = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            entry.isIntersecting && entry.target.classList.add("show");
+        })
+    }, {
+        threshold: 0.7
+    })
+    observerContact.observe(form[0]);
+    observerContact.observe(subHeading[0]);
+    [...medias].forEach(item => {
+        observerContact.observe(item);
+    })
+
+
 })
 //AUTO COUNT HANDLER ==========================
 $(function () {

@@ -78,9 +78,28 @@ $(function () {
     //     slideShow.play();
     // })
 })
+// ANIMATE HANDLER   ========================
+$(function () {
+    const artists = $('.artists-item');
+    const visits = $('.visit-item');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            entry.isIntersecting && entry.target.classList.add("show");
+        })
+    }, {
+        threshold: 0.5
+    });
+    [...artists].forEach(item => {
+        observer.observe(item);
+    });
+    [...visits].forEach(item => {
+        observer.observe(item);
+    })
+})
 //AUTO COUNT HANDLER ==========================
 $(function () {
     const numNode = $('.es-number');
+    const eventSection = $('.event-section');
     function randomNumber(start, end) {
         return Math.floor(Math.random() * (end + 1 - start)) + start;
     }
@@ -91,17 +110,17 @@ $(function () {
             }, 10);
         }
     }
-    const initValue1 = 5000;
-    const initValue2 = 1000;
-    // updateNum(numNode[0], 0, initValue1);
-    // updateNum(numNode[1], 0, initValue2);
-    // const ID = setInterval(() => {
-    //     updateNum(numNode[0], 0, Number(numNode[0].innerText) + randomNumber(1, 300));
-    //     updateNum(numNode[1], 0, Number(numNode[1].innerText) + randomNumber(1, 10));
-    // }, 5000);
-    // setTimeout(() => {
-    //     clearInterval(ID)
-    // }, 180000);
+    const initValue1 = 2000;
+    const initValue2 = 10000;
+    updateNum(numNode[0], 0, initValue1);
+    updateNum(numNode[1], 0, initValue2);
+    const ID = setInterval(() => {
+        updateNum(numNode[0], 0, Number(numNode[0].innerText) + randomNumber(1, 200));
+        updateNum(numNode[1], 0, Number(numNode[1].innerText) + randomNumber(1, 1000));
+    }, 5000);
+    setTimeout(() => {
+        clearInterval(ID)
+    }, 180000);
 
 })
 //ARTWORKS HANDLER ========================

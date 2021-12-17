@@ -108,7 +108,7 @@
   visibility: hidden;
   transition: all 0.3s linear;
 }
-.hover-layer > i {
+.hover-layer > p {
   font-size: 40px;
   color: white;
 }

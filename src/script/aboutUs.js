@@ -3,7 +3,7 @@ $(document).ready(function () {
     const first = document.querySelector('.rea-1')
     const second = document.querySelector('.rea-2')
     const third = document.querySelector('.rea-3')
-    const forth = document.querySelector('.rea-4')
+    const fourth = document.querySelector('.rea-4')
 
     function countUp(rea, to) {
         let speed = 200
@@ -24,7 +24,7 @@ $(document).ready(function () {
         countUp(first, 20)
         countUp(second, 24)
         countUp(third, 12)
-        countUp(forth, 4869)
+        countUp(fourth, 4869)
     })
 })
 

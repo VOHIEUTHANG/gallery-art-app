@@ -742,7 +742,7 @@ h2.gallery-main-title.main-title {
   padding: 40px;
   opacity: 0;
   transform: translateX(-40px);
-  transition: all 0.6s ease-in;
+  transition: all 0.5s ease;
 }
 .contact-form.show {
   opacity: 1;
@@ -836,7 +836,7 @@ h2.gallery-main-title.main-title {
   transform: translateX(40px);
 }
 .contact-media-item.show {
-  animation: sequentiallySlide 0.6s ease-in forwards;
+  animation: sequentiallySlide 0.5s ease forwards;
 }
 .contact-media-item:nth-child(2) {
   animation-delay: 0.2s;

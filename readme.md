@@ -6,3 +6,7 @@
 
 - The Project mainly using javascript with jquery library support to interact width DOM elements and make them animate like slide.
 - Special, we use IntersectionObserver API to create awsome user experience. When a part of object appear in the viewport, immediately callback of IntersectionObserver is fired and elements of DOM will animate to the viewport, it create awsome move bring smooth transition for user.
+
+# Demo Interface of this site.
+
+![image demo for page](/desProject/iamge.png)
